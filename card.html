@@ -1,0 +1,1418 @@
+﻿<!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="windows-1251" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Карточка товара | ГидраТоп</title>
+    <link href="fonts/ptsans/ptsans.css" type="text/css" rel="stylesheet" />
+    <link href="fonts/DINPro/stylesheet.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="style-adjusted.css" type="text/css" rel="stylesheet" />
+    <link href="style-tablet.css" type="text/css" rel="stylesheet" />
+    <link href="style-mobile.css" type="text/css" rel="stylesheet" />
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+
+    <!-- javascript -->
+    <script src="assets/vendors/jquery.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.js"></script>
+
+
+    <script src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body class="bg-lightgray">
+    <header>
+        <div class="header-top">
+            <div class="gt-container">
+
+                <table class="gt-table">
+                    <tbody>
+                        <tr>
+                            <td class="gt-logo">
+                                <a href="#">
+                                    <img src="img/images/logo_left.png" alt="">
+                                </a>
+                            </td>
+                            <td class="gt-menu-holder">
+                                <ul class="gt-menu">
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Производители</a></li>
+                                    <li><a href="#">Гарантии и возврат</a></li>
+                                    <li><a href="#">Доставка</a></li>
+                                    <li><a href="#">Оплата</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+
+                            </td>
+
+                            <td class="gt-icons-top">
+                                <a href="#" class="gt-ico gt-ico-phone"></a>
+                                <a href="#" class="gt-ico gt-ico-user">
+                                    <span class="gt-hide-tablet">Вход / регистрация</span>
+                                </a>
+
+                                <div class="gt-show-mobile gt-icons-mobile ">
+                                    <a href="#" class="gt-ico">
+                                        <ico class="gt-ico-favorite"></ico>
+                                    </a>
+                                    <a href="#" class="gt-ico">
+                                        <ico class="gt-ico-cart"></ico>
+                                    </a>
+
+                                    <div id="gt_mobile-menu-toggler" class="gt_navbar-toggle" onclick="return fn_toggleMobileMenu(this)">
+                                        <span class="sr-only">Свернуть навигацию</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </header>
+    <div class="header-bottom">
+        <div class="gt-container gt-flex-row">
+            <table class="gt-table">
+                <tbody>
+                    <tr>
+                        <td class="gt-catalog">
+                            <a href="#" class="gt-catalog-toggler">Каталог товаров</a>
+                        </td>
+                        <td class="gt-search-top">
+                            <div class="gt-input gt-searchbox">
+                                <input type="text" id="gt-search" placeholder="Поиск товаров и брендов" />
+                                <input name="s" type="submit" class="gt-button gt-btn-blue gt-btn-search" value="" />
+                            </div>
+
+                        </td>
+                        <td class="gt-header-phone">
+
+                            <strong>8-800-000-00-00</strong>
+                            <span>Вам перезвонить?</span>
+                        </td>
+                        <td class="gt-subheader-icons">
+                            <a href="#" class="gt-ico">
+                                <ico class="gt-ico-favorite"></ico><span>Избранное</span></a>
+                            <a href="#" class="gt-ico">
+                                <ico class="gt-ico-poll"></ico><span>Сравнение</span></a>
+                            <a href="#" class="gt-ico">
+                                <ico class="gt-ico-cart"></ico><span>Корзина</span></a>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="gt-bottom-menu">
+        <div class="gt-container gt-flex-row">
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-catalog"></ico>
+                <span>Каталог</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-favorite"></ico>
+                <span>Избранное</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <img src="img/images/logo_small.png" alt="">
+                <span>Главная</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-user"></ico>
+                <span>Профиль</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-cart"></ico>
+                <span>Корзина</span>
+            </a>
+        </div>
+    </div>
+    <!-- Main Content-->
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-breadcrumbs-holder">
+                <ul class="gt-breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Ванны</a></li>
+                    <li><a href="#">Ванны акриловые</a></li>
+                    <li>Ванна акриловая прямоугольная Акватек Мия 140*70см без гидромассажа</li>
+                </ul>
+            </div>
+
+
+            <div class="gt-product-card">
+
+                <div class="gt-block-white">
+                    <div class="gt-card-main-grid">
+                        <div class="gt-product-name">
+                            <h1>Ванна акриловая прямоугольная Акватек Мия 140*70см без гидромассажа</h1>
+                        </div>
+                        <div class="gt-product-rates">
+                            <div class="gt-rating">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                            <div class="gt-product-tags">
+                                <span class="gt-tag tag-hit">Хит продаж</span>
+                            </div>
+                        </div>
+                        <div class="gt-product-gallery">
+
+                            <div class="gt-owl-gallery-control">
+                                <div class="owl-carousel owl-theme" id="gt-card-gallery">
+                                    <div class="item gt-owl-gallery-item">
+                                        <div class="img"><img src="img/images/card/bathtub1.png" alt=""></div>
+                                    </div>
+                                    <div class="item gt-owl-gallery-item">
+                                        <div class="img"><img src="img/images/card/bathtub2.png" alt=""></div>
+                                    </div>
+                                    <div class="item gt-owl-gallery-item">
+                                        <div class="img"><img src="img/images/card/bathtub3.jpeg" alt=""></div>
+                                    </div>
+                                    <div class="item gt-owl-gallery-item">
+                                        <div class="img"><img src="img/images/card/bathtub1.png" alt=""></div>
+                                    </div>
+                                </div>
+
+                                <div class="gt-owl-previews">
+                                    <div class="owl-carousel owl-theme" id="gt-card-gallery-preview">
+                                        <div class="item gt-owl-gallery-preview-item">
+                                            <div class="img"><img src="img/images/card/bathtub1.png" alt=""></div>
+                                        </div>
+                                        <div class="item gt-owl-gallery-preview-item">
+                                            <div class="img"><img src="img/images/card/bathtub2.png" alt=""></div>
+                                        </div>
+                                        <div class="item gt-owl-gallery-preview-item">
+                                            <div class="img"><img src="img/images/card/bathtub3.jpeg" alt=""></div>
+                                        </div>
+                                        <div class="item gt-owl-gallery-preview-item">
+                                            <div class="img"><img src="img/images/card/bathtub1.png" alt=""></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <script type="text/javascript">
+                                function fn_initCardGallery() {
+                                    var main = $('#gt-card-gallery');
+                                    main.owlCarousel({
+                                        margin: 30,
+                                        loop: false,
+                                        autoWidth: false,
+                                        responsiveClass: true,
+                                        nav: false,
+                                        center: true,
+                                        responsive: {
+                                            0: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: true,
+                                                dots: true,
+                                                nav: false,
+                                                margin: 5,
+                                            },
+                                            600: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: false,
+                                                dots: false,
+                                                dotsEach: 0,
+                                                margin: 15,
+                                            },
+                                            1200: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: false,
+                                                dots: false,
+                                                dotsEach: 0,
+                                                margin: 30,
+                                            }
+                                        }
+                                    });
+
+                                    var preview = $('#gt-card-gallery-preview');
+
+                                    preview.owlCarousel({
+                                        loop: false,
+                                        autoWidth: true,
+                                        responsiveClass: true,
+                                        nav: false,
+                                        dots: false,
+                                        items: 4,
+                                        margin: 30,
+                                        responsive: {
+                                            0: {
+                                                items: 3,
+                                                margin: 10,
+                                            },
+                                            600: {
+                                                items: 4,
+                                                margin: 15,
+                                            },
+                                            1200: {
+                                                items: 4,
+                                                loop: true,
+                                                margin: 50,
+                                            }
+                                        }
+                                    });
+                                }
+
+
+                                fn_initCardGallery();
+                            </script>
+                        </div>
+                        <div class="gt-product-info">
+
+                            <div class="gt-grid-50">
+                                <div class="gt-grid50-left gt-hide-mobile gt-about-product">
+                                    <strong>Коротко о товаре</strong>
+                                    <ul class="gt-menu-with-line">
+                                        <li>
+                                            Код товара: <span>232432а2-22</span>
+                                        </li>
+                                        <li>
+                                            Артикул: <span>MIY140-0000001</span>
+                                        </li>
+                                        <li>
+                                            Бренд: <span><a href="#">Мия</a></span>
+                                        </li>
+                                        <li>
+                                            Коллекция: <span><a href="#">Aquatek</a></span>
+                                        </li>
+                                        <li>
+                                            Страна: <span><a href="#">Россия</a></span>
+                                        </li>
+                                        <li>
+                                            Материал: <span>Латунь</span>
+                                        </li>
+                                        <li>
+                                            Габариты: <span>140х44х160</span>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#">Все характеристики</a>
+                                </div>
+                                <div class="gt-grid50-right gt-about-price-details">
+                                    <div class="gt-price">15 000</div>
+
+                                    <div class="gt-tablet-icons gt-show-tablet">
+                                        <a href="#" class="gt-ico">
+                                            <ico class="gt-ico-favorite"></ico>
+                                        </a>
+
+                                        <a href="#" class="gt-ico">
+                                            <ico class="gt-ico-poll"></ico>
+                                        </a>
+                                    </div>
+
+                                    <div class="gt-button-line gt-flex-row">
+                                        <div class="gt-card-btn-holder">
+                                            <a href="#" class="gt-button">В корзину</a>
+                                        </div>
+                                        <div class="gt-card-ico-holder">
+                                            <a href="#" class="gt-ico">
+                                                <ico class="gt-ico-poll"></ico><span>Сравнение</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="gt-button-line gt-flex-row">
+                                        <div class="gt-card-btn-holder">
+                                            <a href="#" class="gt-button gt-btn-white">Купить в один клик</a>
+                                        </div>
+                                        <div class="gt-card-ico-holder">
+                                            <a href="#" class="gt-ico">
+                                                <ico class="gt-ico-favorite"></ico><span>Избранное</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="gt-stock-info">
+                                        <a href="# " class="in-stock gt-hide-mobile ">Товар в наличии</a>
+                                        <p>Самовывоз от <strong>1</strong> дней</p>
+                                        <p>Доставка от <strong>12</strong> дней</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="gt-vertical-separator-line"></div>
+                    </div>
+
+                </div>
+
+                <div class="gt-block-white">
+                    <ul class="gt-card-tab-menu tab__menu" data-tabmenu="true" data-tab-class="gt-card-tabcontent">
+                        <li class="active" data-id="tabAbout">О товаре</li>
+                        <li data-id="tabSpecs">Характеристики</li>
+                        <li data-id="tabComplect">Комплектация</li>
+                        <li data-id="tabDocs">Документация</li>
+                        <li data-id="tabReplies">Отзывы</li>
+                        <li data-id="tabQuestions">Вопросы и ответы</li>
+                    </ul>
+                </div>
+
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabAbout">
+                    <div class="gt-block-white-content">О товаре</div>
+                </div>
+
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabSpecs">
+                    <div class="gt-block-white-content">Характеристики</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabComplect">
+                    <div class="gt-block-white-content">Комплектация</div>
+                </div>
+
+                <!--Тут будет второе меню только для мобильной версии-->
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabDocs">
+
+                    <div class="gt-block-white-content">Документация</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabReplies">
+
+                    <div class="gt-block-white-content">Отзывы</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabQuestions">
+
+                    <div class="gt-block-white-content">Вопросы и ответы</div>
+                </div>
+
+
+                <script>
+                    fn_initJqueyTabControl();
+                </script>
+
+            </div>
+        </div>
+
+
+        </div>
+
+    </section>
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-section-title">
+                <h2>Варианты исполнения</h2>
+                <div class="bg-text">Execution options</div>
+            </div>
+
+
+            <div class="gt-flex-table">
+                <div class="gt-flex-row gt-header-row">
+                    <div class="gt-flex-col rubber-col">
+                        Модель
+                    </div>
+
+                    <div class="gt-flex-col">
+                        Цена
+                    </div>
+
+                    <div class="gt-flex-col">
+                        Длина, см
+                    </div>
+
+
+                    <div class="gt-flex-col">
+                        Ширина, см
+                    </div>
+
+                    <div class="gt-flex-col">
+                        Глубина, см
+                    </div>
+
+                    <div class="gt-flex-col">
+                        Объём, л
+                    </div>
+                </div>
+
+                <div class="gt-flex-row selected">
+                    <div class="gt-flex-col rubber-col">
+                        Вотте Line 1700х700х392 ванна чугунная (БП-э0000д1467)
+                    </div>
+
+                    <div class="gt-flex-col">
+                        22 300 ₽
+                    </div>
+
+                    <div class="gt-flex-col">
+                        150±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        70±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        37,5
+                    </div>
+
+                    <div class="gt-flex-col">
+                        150
+                    </div>
+                </div>
+
+                <div class="gt-flex-row">
+                    <div class="gt-flex-col rubber-col">
+                        Вотте Line 1500х700х392 ванна чугунная (БП-э0000д1465)
+                    </div>
+
+                    <div class="gt-flex-col">
+                        36 000 ₽
+                    </div>
+
+                    <div class="gt-flex-col">
+                        160±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        70±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        37,5
+                    </div>
+
+                    <div class="gt-flex-col">
+                        150
+                    </div>
+                </div>
+
+                <div class="gt-flex-row">
+                    <div class="gt-flex-col rubber-col">
+                        Вотте Line 1600х700х392 ванна чугунная (БП-э0000д1466)
+                    </div>
+
+                    <div class="gt-flex-col">
+                        21 600 ₽
+                    </div>
+
+                    <div class="gt-flex-col">
+                        150±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        70±1
+                    </div>
+
+                    <div class="gt-flex-col">
+                        37,5
+                    </div>
+
+                    <div class="gt-flex-col">
+                        150
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-section-title">
+                <h2>Рекомендуемые товары</h2>
+                <div class="bg-text">Recommended products</div>
+            </div>
+
+
+            <div class="owl-carousel owl-theme gt-owl-products" id="owl-recomended-items">
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/1.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/2.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-new">Новинка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                            <span class="gt-tag tag-special">Акция</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-section-title">
+                <h2>Товары из коллекции Миа</h2>
+                <div class="bg-text">Collection products</div>
+            </div>
+
+
+            <div class="owl-carousel owl-theme gt-owl-products" id="owl-recomended-items">
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/1.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/2.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-new">Новинка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                            <span class="gt-tag tag-special">Акция</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-section-title">
+                <h2>Похожие товары</h2>
+                <div class="bg-text">Similiar products</div>
+            </div>
+
+
+            <div class="owl-carousel owl-theme gt-owl-products" id="owl-recomended-items">
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/1.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/2.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-new">Новинка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                            <span class="gt-tag tag-special">Акция</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item gt-product-item">
+                    <div class="gt-product-item-container">
+                        <div class="gt-pr-item-content">
+                            <div class="product-gal">
+                                <a href="#">
+                                    <img src="img/images/products/4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="name">Наименование продукта 1</a>
+                                <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                <p>Страна:<span>Россия</span></p>
+                                <a href="#" class="in-stock">В наличии</a>
+                                <div class="price">15 000</div>
+                            </div>
+
+                        </div>
+                        <div class="product-actions">
+                            <a href="#" class="gt-button">В корзину</a>
+                            <div class="icons">
+                                <a href="#" class="gt-ico-favorite"></a>
+                                <a href="#" class="gt-ico">
+                                    <ico class="gt-ico-poll"></ico>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="product-tags">
+                            <span class="gt-tag tag-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <script type="text/javascript">
+                $('.gt-owl-products').owlCarousel({
+                    margin: 15,
+                    loop: true,
+                    autoWidth: true,
+                    responsiveClass: true,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 2,
+                            nav: true,
+                            margin: 20,
+                        },
+                        600: {
+                            items: 3,
+                            nav: true,
+                            margin: 25,
+                        },
+                        1200: {
+                            items: 4,
+                            nav: true,
+                            loop: true,
+                            margin: 30,
+                        }
+                    }
+                });
+            </script>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="gt-section">
+        <div class="gt-container">
+            <div class="gt-section-title">
+                <h2>Вы недавно смотрели</h2>
+                <div class="bg-text">Seen recently</div>
+            </div>
+
+
+            <div class="owl-carousel owl-theme" id="gt-recently-seen">
+                <div class="item gt-recent-view-item">
+                    <div class="img">
+                        <a href="#"><img src="img/images/products/1.png" alt=""></a>
+                    </div>
+                    <div class="info">
+                        <a href="#">Наименование продукта 1</a>
+                    </div>
+                </div>
+
+                <div class="item gt-recent-view-item">
+                    <div class="img">
+                        <a href="#"><img src="img/images/products/2.png" alt=""></a>
+                    </div>
+                    <div class="info">
+                        <a href="#">Наименование продукта 2</a>
+                    </div>
+                </div>
+
+                <div class="item gt-recent-view-item">
+                    <div class="img">
+                        <a href="#"><img src="img/images/products/3.png" alt=""></a>
+                    </div>
+                    <div class="info">
+                        <a href="#">Наименование продукта 3</a>
+                    </div>
+                </div>
+
+                <div class="item gt-recent-view-item">
+                    <div class="img">
+                        <a href="#"><img src="img/images/products/4.png" alt=""></a>
+                    </div>
+                    <div class="info">
+                        <a href="#">Наименование продукта 4</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script type="text/javascript">
+                $('#gt-recently-seen').owlCarousel({
+                    loop: false,
+                    autoWidth: true,
+                    responsiveClass: true,
+                    nav: false,
+                    dotsEach: 6,
+                    items: 4,
+                    margin: 30,
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer ">
+        <div class="gt-container ">
+            <div class="gt-footer-row gt-footer-main ">
+                <div class="gt-footer-block ">
+                    <div class="gt-footer-logo ">
+                        <img src="img/images/logo_left.png " alt=" ">
+                    </div>
+
+                    <div class="gt-footer-info ">
+                        <div class="gt-info-title ">
+                            Мы в социальных сетях
+                        </div>
+
+                        <div class="gt-info-content gt-flex-row ">
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_socmedia/ico_vk.png " alt=" " /></a>
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_socmedia/ico_ig.png " alt=" " /></a>
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_socmedia/ico_fb.png " alt=" " /></a>
+
+                        </div>
+                    </div>
+
+                    <div class="gt-footer-info ">
+                        <div class="gt-info-title ">
+                            Мы принимаем
+                        </div>
+                        <div class="gt-info-content gt-flex-row ">
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_payments/ico_visa.png " alt=" " /></a>
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_payments/ico_master.png " alt=" " /></a>
+                            <a href="# " class="gt-ico "><img src="img/icons/ico_payments/ico_mir.png " alt=" " /></a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="gt-footer-block pull-right ">
+                    <div class="gt-footer-title ">КОНТАКТЫ</div>
+                    <ul class="gt-footer-menu ">
+                        <li>
+                            <a href="# " class="gt-ico gt-ico-contact "><span>8-800-000-00-00</span></a>
+                        </li>
+                        <li>
+                            <a href="# " class="gt-ico gt-ico-email "><span>zakak@gidratop.ru</span></a>
+                        </li>
+                        <li>
+                            <a href="# " class="gt-ico gt-ico-address "><span>г. Санкт-Петербург, пр-кт. Невский, д.</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gt-footer-block ">
+                    <div class="gt-footer-title ">ПОКУПАТЕЛЮ</div>
+                    <ul class="gt-footer-menu ">
+                        <li>
+                            <a href="# ">Доставка</a>
+                        </li>
+                        <li>
+                            <a href="# ">Оплата</a>
+                        </li>
+                        <li>
+                            <a href="# ">Гарантии и возврат</a>
+                        </li>
+                        <li>
+                            <a href="# ">Производители</a>
+                        </li>
+                        <li>
+                            <a href="# ">Статьи</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gt-footer-block ">
+                    <div class="gt-footer-title ">КОМПАНИЯ</div>
+                    <ul class="gt-footer-menu ">
+                        <li>
+                            <a href="# ">О нас</a>
+                        </li>
+                        <li>
+                            <a href="# ">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="# ">Пользовательское соглашение</a>
+                        </li>
+                        <li>
+                            <a href="# ">Политика конфиденциальности</a>
+                        </li>
+                        <li>
+                            <a href="# ">Обратная связь</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="gt-footer-row ">
+                <div class="gt-footer-block w50 gt-hide-mobile "></div>
+                <div class="gt-footer-block gt-subscribe ">
+                    <div class="gt-input ">
+                        <input type="text" class="gt-textbox " placeholder="Введите Email " />
+                        <input name="sr " type="submit " class="gt-button " value="Подписаться ">
+                    </div>
+                    <div class="gt-subscribe-hint ">Станьте нашим подписчиком, чтобы быть в курсе информации о новинках и специальных предложениях.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

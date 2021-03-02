@@ -3,79 +3,12 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 ?>
 
-    <div class="header-bottom">
-        <div class="gt-container gt-flex-row">
-            <table class="gt-table">
-                <tbody>
-                <tr>
-                    <td class="gt-catalog">
-                        <a href="#" class="gt-catalog-toggler">Каталог товаров</a>
-                    </td>
-                    <td class="gt-search-top">
-                        <div class="gt-input gt-searchbox">
-                            <input type="text" id="gt-search" placeholder="Поиск товаров и брендов" />
-                            <input name="s" type="submit" class="gt-button gt-btn-blue gt-btn-search" value="" />
-                        </div>
-
-                    </td>
-                    <td class="gt-header-phone">
-
-                        <strong>8-800-000-00-00</strong>
-                        <span>Вам перезвонить?</span>
-                    </td>
-                    <td class="gt-subheader-icons">
-                        <a href="#" class="gt-ico">
-                            <ico class="gt-ico-favorite"></ico><span>Избранное</span></a>
-                        <a href="#" class="gt-ico">
-                            <ico class="gt-ico-poll"></ico><span>Сравнение</span></a>
-                        <a href="#" class="gt-ico">
-                            <ico class="gt-ico-cart"></ico><span>Корзина</span></a>
-
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
-    <div class="gt-bottom-menu">
-        <div class="gt-container gt-flex-row">
-            <a href="#" class="gt-ico">
-                <ico class="gt-ico-catalog"></ico>
-                <span>Каталог</span>
-            </a>
-
-            <a href="#" class="gt-ico">
-                <ico class="gt-ico-favorite"></ico>
-                <span>Избранное</span>
-            </a>
-
-            <a href="#" class="gt-ico">
-                <img src="img/images/logo_small.png" alt="">
-                <span>Главная</span>
-            </a>
-
-            <a href="#" class="gt-ico">
-                <ico class="gt-ico-user"></ico>
-                <span>Профиль</span>
-            </a>
-
-            <a href="#" class="gt-ico">
-                <ico class="gt-ico-cart"></ico>
-                <span>Корзина</span>
-            </a>
-        </div>
-    </div>
-    <!-- Main Content-->
-
-
     <section class="gt-section" id="gt-section-slider">
         <div class="slides">
             <div class="gt-slide-item">
                 <div class="gt-slider-slide">
                     <div class="gt-slide-background">
-                        <img src="img/images/slider/slide1.jpg" alt="" />
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/slider/slide1.jpg" alt="" />
                     </div>
                     <div class="gt-slide-caption">
                         <p>Скидки на мебель для ванной комнаты</p>
@@ -88,7 +21,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="gt-slide-item">
                 <div class="gt-slider-slide">
                     <div class="gt-slide-background">
-                        <img src="img/images/slider/slide1.jpg" alt="" />
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/slider/slide1.jpg" alt="" />
                     </div>
                     <div class="gt-slide-caption">
                         <p>Скидки на мебель для ванной комнаты</p>
@@ -102,7 +35,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="gt-slide-item">
                 <div class="gt-slider-slide">
                     <div class="gt-slide-background">
-                        <img src="img/images/slider/slide1.jpg" alt="" />
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/slider/slide1.jpg" alt="" />
                     </div>
                     <div class="gt-slide-caption">
                         <p>Скидки на мебель для ванной комнаты</p>
@@ -124,10 +57,10 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 transitionType: 'all',
                 speed: 500
             });
-
             sliderMain.buildTemplate();
         </script>
     </section>
+
     <section class="gt-section">
         <div class="gt-container">
             <div class="gt-section-title">
@@ -137,33 +70,33 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="owl-carousel owl-theme gt-slider-promo" id="slider-promos">
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner1.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner1.jpg" alt="">
                     </div>
                 </div>
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner2.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner2.jpg" alt="">
                     </div>
                 </div>
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner3.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner3.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner1.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner1.jpg" alt="">
                     </div>
                 </div>
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner2.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner2.jpg" alt="">
                     </div>
                 </div>
                 <div class="item gt-promo-item">
                     <div class="img">
-                        <img src="img/images/banner3.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/banner3.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -195,7 +128,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     }
                 })
             </script>
-
 
         </div>
     </section>
@@ -880,8 +812,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         </div>
     </section>
 
-
-
     <section class="gt-section gt-show-mobile" id="gt-mobile-hits">
         <div class="gt-container">
             <div class="gt-section-title gt-show-mobile">
@@ -1096,7 +1026,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         </div>
     </section>
 
-
     <section class="gt-section" id="gt-section-promo">
         <div class="gt-container">
             <div class="gt-disclaimer-grid">
@@ -1175,7 +1104,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
         </div>
     </section>
-
 
     <section class="gt-section gt-show-mobile" id="gt-mobile-new">
         <div class="gt-container">
@@ -1464,7 +1392,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         </script>
     </section>
 
-
     <section class="gt-section gt-show-mobile" id="gt-mobile-discounts">
         <div class="gt-container">
 
@@ -1738,7 +1665,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             </div>
     </section>
 
-
     <section class="gt-section">
         <div class="gt-container">
 
@@ -1784,7 +1710,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             </script>
         </div>
     </section>
-
 
     <section class="gt-section">
         <div class="gt-container">
@@ -2035,7 +1960,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         </div>
     </section>
 
-
     <section class="gt-section">
         <div class="gt-container">
 
@@ -2110,8 +2034,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
         </div>
     </section>
-
-
 
     <section class="gt-section">
         <div class="gt-container">
@@ -2237,111 +2159,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
         </div>
     </section>
-
-    <!-- Footer-->
-    <footer class="footer">
-        <div class="gt-container">
-            <div class="gt-footer-row gt-footer-main">
-                <div class="gt-footer-block">
-                    <div class="gt-footer-logo">
-                        <img src="img/images/logo_left.png" alt="">
-                    </div>
-
-                    <div class="gt-footer-info">
-                        <div class="gt-info-title">
-                            Мы в социальных сетях
-                        </div>
-
-                        <div class="gt-info-content gt-flex-row">
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_socmedia/ico_vk.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_socmedia/ico_ig.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_socmedia/ico_fb.png" alt="" /></a>
-
-                        </div>
-                    </div>
-
-                    <div class="gt-footer-info">
-                        <div class="gt-info-title">
-                            Мы принимаем
-                        </div>
-                        <div class="gt-info-content gt-flex-row">
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_payments/ico_visa.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_payments/ico_master.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="img/icons/ico_payments/ico_mir.png" alt="" /></a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="gt-footer-block pull-right">
-                    <div class="gt-footer-title">КОНТАКТЫ</div>
-                    <ul class="gt-footer-menu">
-                        <li>
-                            <a href="#" class="gt-ico gt-ico-contact"><span>8-800-000-00-00</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="gt-ico gt-ico-email"><span>zakak@gidratop.ru</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="gt-ico gt-ico-address"><span>г. Санкт-Петербург, пр-кт. Невский, д.</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gt-footer-block">
-                    <div class="gt-footer-title">ПОКУПАТЕЛЮ</div>
-                    <ul class="gt-footer-menu">
-                        <li>
-                            <a href="#">Доставка</a>
-                        </li>
-                        <li>
-                            <a href="#">Оплата</a>
-                        </li>
-                        <li>
-                            <a href="#">Гарантии и возврат</a>
-                        </li>
-                        <li>
-                            <a href="#">Производители</a>
-                        </li>
-                        <li>
-                            <a href="#">Статьи</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gt-footer-block">
-                    <div class="gt-footer-title">КОМПАНИЯ</div>
-                    <ul class="gt-footer-menu">
-                        <li>
-                            <a href="#">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
-                        </li>
-                        <li>
-                            <a href="#">Пользовательское соглашение</a>
-                        </li>
-                        <li>
-                            <a href="#">Политика конфиденциальности</a>
-                        </li>
-                        <li>
-                            <a href="#">Обратная связь</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <div class="gt-footer-row">
-                <div class="gt-footer-block w50 gt-hide-mobile"></div>
-                <div class="gt-footer-block gt-subscribe">
-                    <div class="gt-input">
-                        <input type="text" class="gt-textbox" placeholder="Введите Email" />
-                        <input name="sr" type="submit" class="gt-button" value="Подписаться">
-                    </div>
-                    <div class="gt-subscribe-hint">Станьте нашим подписчиком, чтобы быть в курсе информации о новинках и специальных предложениях.</div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

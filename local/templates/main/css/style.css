@@ -75,13 +75,13 @@ a.in-stock::after {
     content: '';
     width: 10px;
     height: 9px;
-    background: url(img/icons/ico_instock.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_instock.svg) 0px 0px no-repeat;
     background-size: contain;
     margin-left: 7px;
 }
 
 .gt-ico-user {
-    background: url(img/icons/ico_menu/ico_profile.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_menu/ico_profile.svg) 0 0 no-repeat;
     background-size: contain;
     min-width: 25px;
     height: 25px;
@@ -96,13 +96,13 @@ a.in-stock::after {
 }
 
 .gt-ico-user:hover {
-    background: url(img/icons/ico_menu/ico_profile_hover.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_menu/ico_profile_hover.svg) 0 0 no-repeat;
     background-size: contain;
     color: #6CDB7E;
 }
 
 a.gt-ico-phone {
-    background: url(img/icons/ico_menu/ico_phone_hover.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_menu/ico_phone_hover.svg) 0 0 no-repeat;
     width: 18px;
     height: 18px;
 }
@@ -318,7 +318,7 @@ header>.header-top {
 
 .gt-ico-catalog {
     display: block;
-    background: url(img/icons/ico_menu/ico_catalog.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_menu/ico_catalog.svg) 0 0 no-repeat;
     background-size: contain;
     width: 31px;
     height: 31px;
@@ -328,7 +328,7 @@ header>.header-top {
 
 .gt-catalog-toggler {
     display: block;
-    background: url(img/icons/ico_menu/ico_catalog.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_menu/ico_catalog.svg) 0 0 no-repeat;
     background-size: contain;
     min-width: 31px;
     height: 31px;
@@ -438,7 +438,7 @@ header>.header-top {
 }
 
 .gt-btn-search {
-    background: url(img/icons/ico_search_big.svg) 0px 0px no-repeat #4798DE;
+    background: url(../img/icons/ico_search_big.svg) 0px 0px no-repeat #4798DE;
     background-position: center;
     background-size: contain;
     padding: 16px 38px;
@@ -448,7 +448,7 @@ header>.header-top {
 }
 
 .gt-btn-search:hover {
-    background: url(img/icons/ico_search_big.svg) 0px 0px no-repeat #60A3DE;
+    background: url(../img/icons/ico_search_big.svg) 0px 0px no-repeat #60A3DE;
     background-position: center;
     background-size: contain;
     border: solid 1px #60A3DE;
@@ -524,14 +524,14 @@ header>.header-top {
     width: 25px;
     height: 25px;
     margin: auto;
-    background: url(img/icons/ico_menu/ico_favorite.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_favorite.svg) 0px 0px no-repeat;
     background-size: contain;
     margin-bottom: 3px;
 }
 
 .gt-ico-favorite:hover,
 a.gt-ico:hover>.gt-ico-favorite {
-    background: url(img/icons/ico_menu/ico_favorite_hover.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_favorite_hover.svg) 0px 0px no-repeat;
     background-size: contain;
 }
 
@@ -540,13 +540,13 @@ a.gt-ico:hover>.gt-ico-favorite {
     width: 30px;
     height: 30px;
     margin: auto;
-    background: url(img/icons/ico_menu/ico_poll.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_poll.svg) 0px 0px no-repeat;
     background-size: contain;
 }
 
 .gt-ico-poll:hover,
 a.gt-ico:hover>.gt-ico-poll {
-    background: url(img/icons/ico_menu/ico_poll_hover.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_poll_hover.svg) 0px 0px no-repeat;
     background-size: contain;
 }
 
@@ -555,13 +555,13 @@ a.gt-ico:hover>.gt-ico-poll {
     width: 30px;
     height: 30px;
     margin: auto;
-    background: url(img/icons/ico_menu/ico_cart.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_cart.svg) 0px 0px no-repeat;
     background-size: contain;
 }
 
 .gt-ico-cart:hover,
 a.gt-ico:hover>.gt-ico-cart {
-    background: url(img/icons/ico_menu/ico_cart_hover.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_menu/ico_cart_hover.svg) 0px 0px no-repeat;
     background-size: contain;
 }
 
@@ -747,21 +747,21 @@ a.gt-ico:hover>.gt-ico-cart {
 }
 
 .gt-ico-contact {
-    background: url(img/icons/ico_footer/ico_phone.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_footer/ico_phone.svg) 0px 0px no-repeat;
     min-width: 16px;
     min-height: 16px;
     padding-left: 18px;
 }
 
 .gt-ico-email {
-    background: url(img/icons/ico_footer/ico_envelope_bottom.svg) 0px 3px no-repeat;
+    background: url(../img/icons/ico_footer/ico_envelope_bottom.svg) 0px 3px no-repeat;
     min-width: 17px;
     min-height: 17px;
     padding-left: 17px;
 }
 
 .gt-ico-address {
-    background: url(img/icons/ico_footer/ico_contacts.svg) 0px 2px no-repeat;
+    background: url(../img/icons/ico_footer/ico_contacts.svg) 0px 2px no-repeat;
     min-width: 17px;
     min-height: 19px;
     padding-left: 17px;
@@ -1011,7 +1011,7 @@ a.gt-ico:hover>.gt-ico-cart {
     content: '';
     width: 10px;
     height: 9px;
-    background: url(img/icons/ico_instock.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_instock.svg) 0px 0px no-repeat;
     background-size: contain;
     margin-left: 7px;
 }
@@ -1327,7 +1327,7 @@ a.gt-ico:hover>.gt-ico-cart {
 }
 
 #gt-section-promo {
-    background: url(img/images/addition_bg3.jpg) 0px 0px no-repeat;
+    background: url(../img/images/addition_bg3.jpg) 0px 0px no-repeat;
     background-position: top center;
     background-size: cover;
     padding-top: 20px;
@@ -1549,7 +1549,7 @@ ul.gt-breadcrumbs>li a {
 ul.gt-breadcrumbs>li::before {
     content: '';
     display: inline-block;
-    background: url(img/icons/ico_breadcrumb.svg) 0 0 no-repeat;
+    background: url(../img/icons/ico_breadcrumb.svg) 0 0 no-repeat;
     width: 10px;
     height: 10px;
     margin-right: 5px;
@@ -1629,11 +1629,11 @@ a.gt-view-icon {
 }
 
 a.gt-view-icon.gt-view-1 {
-    background: url(img/icons/ico_catalog_type1.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_catalog_type1.svg) 0px 0px no-repeat;
 }
 
 a.gt-view-icon.gt-view-2 {
-    background: url(img/icons/ico_catalog_type2.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_catalog_type2.svg) 0px 0px no-repeat;
 }
 
 .gt-aside-block {
@@ -1671,12 +1671,12 @@ a.gt-view-icon.gt-view-2 {
     display: inline-block;
     width: 7px;
     height: 5px;
-    background: url(img/icons/ico_expander_down.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_expander_down.svg) 0px 0px no-repeat;
     margin-right: 8px;
 }
 
 .gt-aside-block.expanded>.gt-aside-block-title>.gt-aside-toggler::before {
-    background: url(img/icons/ico_expander_up.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_expander_up.svg) 0px 0px no-repeat;
 }
 
 .gt-aside-block>.gt-aside-block-content {
@@ -1840,7 +1840,7 @@ a.gt-view-icon.gt-view-2 {
     width: 15px;
     height: 15px;
     cursor: pointer;
-    background: url(img/icons/ico_checkbox.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_checkbox.svg) 0px 0px no-repeat;
     background-size: contain;
     margin-right: 5px;
 }
@@ -1900,7 +1900,7 @@ a.gt-view-icon.gt-view-2 {
     content: '';
     width: 7px;
     height: 5px;
-    background: url(img/icons/ico_expander_down.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_expander_down.svg) 0px 0px no-repeat;
     margin-right: 10px;
 }
 
@@ -2284,7 +2284,7 @@ a.gt-white-item:hover {
     display: block;
     width: 15px;
     height: 15px;
-    background: url(img/icons/ico_star_gold.svg) 0px 0px no-repeat;
+    background: url(../img/icons/ico_star_gold.svg) 0px 0px no-repeat;
     background-size: contain;
     margin: 0px 1px;
 }
@@ -2355,19 +2355,19 @@ a.gt-white-item:hover {
     cursor: pointer;
     border-radius: 50%;
     margin: 0 50px;
-    background: url(img/slider/arrow_left.svg) 14px 15px no-repeat white;
+    background: url(../img/slider/arrow_left.svg) 14px 15px no-repeat white;
 }
 
 .custom-slider>.slider-menu .icon-change.next {
-    background: url(img/slider/arrow_right.svg) 18px 15px no-repeat white;
+    background: url(../img/slider/arrow_right.svg) 18px 15px no-repeat white;
 }
 
 .custom-slider>.slider-menu .icon-change:hover {
-    background: url(img/slider/arrow_left_hover.svg) 14px 15px no-repeat #FF2120;
+    background: url(../img/slider/arrow_left_hover.svg) 14px 15px no-repeat #FF2120;
 }
 
 .custom-slider>.slider-menu .icon-change.next:hover {
-    background: url(img/slider/arrow_right_hover.svg) 18px 15px no-repeat #FF2120;
+    background: url(../img/slider/arrow_right_hover.svg) 18px 15px no-repeat #FF2120;
 }
 
 .custom-slider>.slider-menu>ul {
@@ -2462,13 +2462,13 @@ a.gt-white-item:hover {
 }
 
 .owl-prev>span {
-    background: url(img/icons/slider_left.svg) 0px 0px no-repeat!important;
+    background: url(../img/icons/slider_left.svg) 0px 0px no-repeat!important;
     background-size: contain;
     margin-left: -5px;
 }
 
 .owl-next>span {
-    background: url(img/icons/slider_right.svg) 0px 0px no-repeat!important;
+    background: url(../img/icons/slider_right.svg) 0px 0px no-repeat!important;
     background-size: contain;
     margin-left: 5px;
 }

@@ -24,14 +24,14 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style-adjusted.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style-tablet.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style-mobile.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/assets/owlcarousel/assets/owl.carousel.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/assets/owlcarousel/assets/owl.theme.default.min.css');
 
     // JS
     // Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.5.1.min.js');
     // Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js');
     // Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js');
     // Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/swiper@6.4.1/swiper-bundle.min.js');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/assets/owlcarousel/assets/owl.carousel.min.css');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/assets/owlcarousel/assets/owl.theme.default.min.css');
     Asset::getInstance()->addJs('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js');
     Asset::getInstance()->addJs('https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/assets/vendors/jquery.min.js');
@@ -99,3 +99,67 @@
             </div>
         </div>
     </header>
+
+    <div class="header-bottom">
+        <div class="gt-container gt-flex-row">
+            <table class="gt-table">
+                <tbody>
+                <tr>
+                    <td class="gt-catalog">
+                        <a href="<?=SITE_DIR;?>catalog/" class="gt-catalog-toggler">Каталог товаров</a>
+                    </td>
+                    <td class="gt-search-top">
+                        <div class="gt-input gt-searchbox">
+                            <input type="text" id="gt-search" placeholder="Поиск товаров и брендов" />
+                            <input name="s" type="submit" class="gt-button gt-btn-blue gt-btn-search" value="" />
+                        </div>
+
+                    </td>
+                    <td class="gt-header-phone">
+
+                        <strong>8-800-000-00-00</strong>
+                        <span>Вам перезвонить?</span>
+                    </td>
+                    <td class="gt-subheader-icons">
+                        <a href="#" class="gt-ico">
+                            <ico class="gt-ico-favorite"></ico><span>Избранное</span></a>
+                        <a href="#" class="gt-ico">
+                            <ico class="gt-ico-poll"></ico><span>Сравнение</span></a>
+                        <a href="#" class="gt-ico">
+                            <ico class="gt-ico-cart"></ico><span>Корзина</span></a>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="gt-bottom-menu">
+        <div class="gt-container gt-flex-row">
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-catalog"></ico>
+                <span>Каталог</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-favorite"></ico>
+                <span>Избранное</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <img src="img/images/logo_small.png" alt="">
+                <span>Главная</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-user"></ico>
+                <span>Профиль</span>
+            </a>
+
+            <a href="#" class="gt-ico">
+                <ico class="gt-ico-cart"></ico>
+                <span>Корзина</span>
+            </a>
+        </div>
+    </div>

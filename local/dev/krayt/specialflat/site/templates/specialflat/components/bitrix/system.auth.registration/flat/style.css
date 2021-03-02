@@ -1,0 +1,32 @@
+div.bx-auth input.bx-auth-input {vertical-align:middle;}
+div.bx-auth span.bx-auth-secure {background-color:#FFFAE3; border:1px solid #DEDBC8; padding:2px; display:inline-block; vertical-align:middle;}
+div.bx-auth div.bx-auth-secure-icon {background-image:url(images/sec.png); background-repeat:no-repeat; background-position:center; width:19px; height:18px;}
+div.bx-auth div.bx-auth-secure-unlock {background-image:url(images/sec-unlocked.png);}
+
+.regestration .bx-auth-table tr{
+    height: 60px;
+}
+.regestration .bx-auth-table {
+    margin-top: 10px;
+}
+.regestration .captcha_img{
+    position: relative;
+}
+.regestration .captcha_img img{
+    margin-top: 9px;
+    right: -10px;
+    position: absolute;
+}
+.regestration .bx-auth-table .forgot_path{
+    display: none;
+}
+
+@media all and (max-width: 481px){
+    .bx-auth-table .captcha_img img{
+        position: relative;
+        right: 0;
+    }
+    .regestration .captcha_img input{
+        width: 100% !important;
+    }
+}

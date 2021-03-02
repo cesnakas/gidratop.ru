@@ -1,0 +1,39 @@
+div.bx-auth input.bx-auth-input {vertical-align:middle;}
+div.bx-auth span.bx-auth-secure {background-color:#FFFAE3; border:1px solid #DEDBC8; padding:2px; display:inline-block; vertical-align:middle;}
+div.bx-auth div.bx-auth-secure-icon {background-image:url(images/sec.png); background-repeat:no-repeat; background-position:center; width:19px; height:18px;}
+div.bx-auth div.bx-auth-secure-unlock {background-image:url(images/sec-unlocked.png);}
+
+.bx-auth-table {
+    margin-top: 20px;
+}
+.bx-auth-table td {
+    padding-bottom: 25px;
+    position: relative
+}
+.authorize-submit-cell{
+    padding-left: 100px;
+}
+.auth_page .addition_text{
+    font-size: 13px;
+    padding-left: 100px;
+}
+.bx-auth-table .captcha_img img {
+    right: 0;
+    position: absolute;
+}
+
+@media all and (max-width: 481px){
+    .authorize-submit-cell{
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+        position: absolute !important;
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+    .auth_page .addition_text{
+        margin-top: 70px;
+        padding-left: 0;
+    }
+}

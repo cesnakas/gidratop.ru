@@ -6,6 +6,7 @@ $userName = CUser::GetFullName();
 if (!$userName)
 	$userName = CUser::GetLogin();
 ?>
+
 <script>
 	<?if ($userName):?>
 	BX.localStorage.set("eshop_user_name", "<?=CUtil::JSEscape($userName)?>", 604800);
@@ -23,6 +24,7 @@ $APPLICATION->SetTitle("Авторизация");
 
 LocalRedirect(SITE_DIR);
 ?>
+
 <p>Вы зарегистрированы и успешно авторизовались.</p>
 
 <p><a href="<?=SITE_DIR?>">Вернуться на главную страницу</a></p>

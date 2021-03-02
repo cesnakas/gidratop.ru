@@ -3,4 +3,3 @@ $sSectionName = "Авторизация";
 $arDirProperties = array(
 
 );
-?>

@@ -138,10 +138,10 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div id="gt-tabs" class="gt-tabcontrol">
                 <ul class="gt-tabmenu gt-tabs-ul1">
                     <li class="active">
-                        <a href="#" data-tab="tabHits" onclick="clickTab(event, this)"><img src="img/icons/ico_tab1.svg" alt="" />Хиты продаж</a>
+                        <a href="#" data-tab="tabHits" onclick="clickTab(event, this)"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_tab1.svg" alt="" />Хиты продаж</a>
                     </li>
                     <li>
-                        <a href="#" data-tab="tabNew" onclick="clickTab(event, this)"><img src="img/icons/ico_tab2.svg" alt="" />Новинки</a>
+                        <a href="#" data-tab="tabNew" onclick="clickTab(event, this)"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_tab2.svg" alt="" />Новинки</a>
                     </li>
                     <li><a href="#" data-tab="tabPromos" onclick="clickTab(event, this)">% Скидки</a></li>
                 </ul>
@@ -158,7 +158,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     <li><a href="#" onclick="return false;">Системы инсталяции</a></li>
                 </ul>
 
-
                 <div class="gt-tabcontent active" id="tabHits">
 
                     <div class="owl-carousel owl-theme gt-owl-products-tabs">
@@ -167,7 +166,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/1.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -201,7 +200,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/2.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -235,7 +234,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -269,7 +268,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -303,7 +302,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -337,7 +336,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -381,7 +380,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/1.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -415,7 +414,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/2.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -449,7 +448,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -483,7 +482,39 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="#" class="name">Наименование продукта 1</a>
+                                        <p>Бренд:<span><a href="#">Aquatek</a></span></p>
+                                        <p>Страна:<span>Россия</span></p>
+                                        <a href="#" class="in-stock">В наличии</a>
+                                        <div class="price">15 000</div>
+                                    </div>
+
+                                </div>
+                                <div class="product-actions">
+                                    <a href="#" class="gt-button">В корзину</a>
+                                    <div class="icons">
+                                        <a href="#" class="gt-ico-favorite"></a>
+                                        <a href="#" class="gt-ico">
+                                            <ico class="gt-ico-poll"></ico>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-tags">
+                                    <span class="gt-tag tag-new">Новинка</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item gt-product-item">
+                            <div class="gt-product-item-container">
+                                <div class="gt-pr-item-content">
+                                    <div class="product-gal">
+                                        <a href="#">
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -517,41 +548,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
-                                        </a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="#" class="name">Наименование продукта 1</a>
-                                        <p>Бренд:<span><a href="#">Aquatek</a></span></p>
-                                        <p>Страна:<span>Россия</span></p>
-                                        <a href="#" class="in-stock">В наличии</a>
-                                        <div class="price">15 000</div>
-                                    </div>
-
-                                </div>
-                                <div class="product-actions">
-                                    <a href="#" class="gt-button">В корзину</a>
-                                    <div class="icons">
-                                        <a href="#" class="gt-ico-favorite"></a>
-                                        <a href="#" class="gt-ico">
-                                            <ico class="gt-ico-poll"></ico>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                                <div class="product-tags">
-                                    <span class="gt-tag tag-new">Новинка</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item gt-product-item">
-                            <div class="gt-product-item-container">
-                                <div class="gt-pr-item-content">
-                                    <div class="product-gal">
-                                        <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -593,7 +590,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/1.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -627,7 +624,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/2.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -661,7 +658,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -695,7 +692,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -729,7 +726,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/3.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -763,7 +760,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                                 <div class="gt-pr-item-content">
                                     <div class="product-gal">
                                         <a href="#">
-                                            <img src="img/images/products/4.png" alt="" />
+                                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -799,15 +796,9 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
 
-
-
-
-
             <script type="text/javascript">
                 adjustOwlProducts();
             </script>
-
-
 
         </div>
     </section>
@@ -824,7 +815,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/1.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -858,7 +849,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/2.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -892,7 +883,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -926,7 +917,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -960,7 +951,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -994,7 +985,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1039,7 +1030,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 <div class="gt-disclaimer-3">
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer1.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer1.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>Доставка</strong>
@@ -1049,7 +1040,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer2.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer2.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>Самовывоз</strong>
@@ -1060,7 +1051,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer5.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer5.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>ШИРОКИЙ АССОРТИМЕНТ ТОВАРОВ</strong>
@@ -1070,7 +1061,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer3.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer3.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>Клиентский сервис</strong>
@@ -1080,7 +1071,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer4.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer4.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>Гарантия качества</strong>
@@ -1090,7 +1081,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     <div class="gt-offer">
                         <div class="gt-offer-thumb">
-                            <img src="img/icons/ico_offer6.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_offer6.svg" alt="">
                         </div>
                         <div class="gt-offer-info">
                             <strong>Акции и скидки</strong>
@@ -1117,7 +1108,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/1.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1151,7 +1142,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/2.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1185,7 +1176,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1219,7 +1210,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1253,7 +1244,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1287,7 +1278,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1324,32 +1315,32 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         <div class="gt-container">
             <div class="owl-carousel owl-theme" id="owl-stories">
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/1.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/1.png" alt="">
                     <span>Бренды</span>
                 </div>
 
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/2.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/2.png" alt="">
                     <span>Акции</span>
                 </div>
 
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/3.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/3.png" alt="">
                     <span>Оплата</span>
                 </div>
 
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/4.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/4.png" alt="">
                     <span>Ванны Roca</span>
                 </div>
 
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/5.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/5.png" alt="">
                     <span>Дарим подарки</span>
                 </div>
 
                 <div class="item gt-story-item">
-                    <img src="img/images/stories/6.png" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/stories/6.png" alt="">
                     <span>Выбрать ванну</span>
                 </div>
             </div>
@@ -1358,7 +1349,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
 
         <div class="gt-backdrop">
-            <img src="img/images/additional_bg1.jpg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/additional_bg1.jpg" alt="">
             <div class="gt-fader"></div>
             <div class="gt-fader light"></div>
         </div>
@@ -1405,7 +1396,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/1.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1439,7 +1430,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/2.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1473,7 +1464,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1507,7 +1498,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1541,7 +1532,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1575,7 +1566,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1616,49 +1607,49 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="gt-popular-list">
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/1.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/1.png" alt="">
                         <span>Раковины</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/2.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/2.png" alt="">
                         <span>Унитазы</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/3.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/3.png" alt="">
                         <span>Смесители</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/4.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/4.png" alt="">
                         <span>Системы инсталяции</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/5.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/5.png" alt="">
                         <span>Ванны</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/6.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/6.png" alt="">
                         <span>Мебель для ванных комнат</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/7.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/7.png" alt="">
                         <span>Душевые углы и ограждения</span>
                     </a>
                 </div>
                 <div class="gt-popular-item">
                     <a href="#">
-                        <img src="img/images/popular/1.png" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/popular/1.png" alt="">
                         <span>Аксессуары для ванных комнат</span>
                     </a>
                 </div>
@@ -1671,12 +1662,12 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="owl-carousel owl-theme gt-slider-promo" id="slider-promos-big">
                 <div class="item gt-promo-item big">
                     <div class="img">
-                        <img src="img/images/big_banner1.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/big_banner1.jpg" alt="">
                     </div>
                 </div>
                 <div class="item gt-promo-item big">
                     <div class="img">
-                        <img src="img/images/big_banner2.jpg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/big_banner2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -1725,7 +1716,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/1.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/1.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1759,7 +1750,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/2.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/2.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1793,7 +1784,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1828,7 +1819,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1862,7 +1853,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/3.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/3.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1896,7 +1887,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="gt-pr-item-content">
                             <div class="product-gal">
                                 <a href="#">
-                                    <img src="img/images/products/4.png" alt="" />
+                                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/products/4.png" alt="" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -1970,33 +1961,33 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
             <div class="owl-carousel owl-theme" id="owl-brands">
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand1.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand1.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand2.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand2.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand3.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand3.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand4.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand4.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand5.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand5.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand6.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand6.png" />
                 </div>
 
 
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand1.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand1.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand2.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand2.png" />
                 </div>
                 <div class="item gt-brand">
-                    <img src="img/images/brands/brand3.png" />
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/brands/brand3.png" />
                 </div>
             </div>
 
@@ -2047,7 +2038,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
             <div class="owl-carousel owl-theme" id="owl-news">
                 <div class="item gt-news-item">
                     <div class="gt-news-preview">
-                        <a href="#"><img src="img/images/news-item.jpg"></a>
+                        <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/img/images/news-item.jpg"></a>
                         <div class="gt-news-button">
                             <a href="#" class="gt-button">Перейти в раздел</a>
                         </div>
@@ -2063,7 +2054,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                 <div class="item gt-news-item">
                     <div class="gt-news-preview">
-                        <a href="#"><img src="img/images/news-item.jpg"></a>
+                        <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/img/images/news-item.jpg"></a>
                         <div class="gt-news-button">
                             <a href="#" class="gt-button">Перейти в раздел</a>
                         </div>
@@ -2079,7 +2070,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                 <div class="item gt-news-item">
                     <div class="gt-news-preview">
-                        <a href="#"><img src="img/images/news-item.jpg"></a>
+                        <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/img/images/news-item.jpg"></a>
                         <div class="gt-news-button">
                             <a href="#" class="gt-button">Перейти в раздел</a>
                         </div>
@@ -2095,7 +2086,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                 <div class="item gt-news-item">
                     <div class="gt-news-preview">
-                        <a href="#"><img src="img/images/news-item.jpg"></a>
+                        <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/img/images/news-item.jpg"></a>
                         <div class="gt-news-button">
                             <a href="#" class="gt-button">Перейти в раздел</a>
                         </div>
@@ -2111,7 +2102,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                 <div class="item gt-news-item">
                     <div class="gt-news-preview">
-                        <a href="#"><img src="img/images/news-item.jpg"></a>
+                        <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/img/images/news-item.jpg"></a>
                         <div class="gt-news-button">
                             <a href="#" class="gt-button">Перейти в раздел</a>
                         </div>

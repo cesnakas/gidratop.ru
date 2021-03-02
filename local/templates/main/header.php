@@ -16,8 +16,6 @@
     //Extension::load('ui.bootstrap4');
 
     // CSS
-    // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css');
-    // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/swiper@6.4.1/swiper-bundle.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/ptsans/ptsans.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/DINPro/stylesheet.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/style.css');
@@ -28,10 +26,6 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/assets/owlcarousel/assets/owl.theme.default.min.css');
 
     // JS
-    // Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.5.1.min.js');
-    // Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js');
-    // Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js');
-    // Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/swiper@6.4.1/swiper-bundle.min.js');
     Asset::getInstance()->addJs('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js');
     Asset::getInstance()->addJs('https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/assets/vendors/jquery.min.js');

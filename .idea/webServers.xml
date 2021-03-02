@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="0651097b-863b-481c-b4c4-dba085c31575" name="gidratop.ru" url="http://188.225.33.200">
+        <fileTransfer rootFolder="/home/bitrix/www" accessType="SFTP" host="188.225.33.200" port="22" sshConfigId="ccad3319-e647-4596-a532-33692049b6c3" sshConfig="root@188.225.33.200:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

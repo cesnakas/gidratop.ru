@@ -35,6 +35,35 @@
 
     <title><?$APPLICATION->ShowTitle();?></title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178776193-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-178776193-1');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(67589239, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/67589239" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
 </head>
@@ -54,22 +83,39 @@
                             </a>
                         </td>
                         <td class="gt-menu-holder">
-                            <ul class="gt-menu">
-                                <li><a href="#">О нас</a></li>
-                                <li><a href="#">Производители</a></li>
-                                <li><a href="#">Гарантии и возврат</a></li>
-                                <li><a href="#">Доставка</a></li>
-                                <li><a href="#">Оплата</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "top_menu",
+                                array(
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "MAX_LEVEL" => "4",
+                                    "CHILD_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N",
+                                    "DELAY" => "N",
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "MENU_CACHE_GET_VARS" => array("")
+                                ),
+                                false
+                            );?>
                         </td>
 
                         <td class="gt-icons-top">
                             <a href="#" class="gt-ico gt-ico-phone"></a>
-                            <a href="#" class="gt-ico gt-ico-user">
-                                <span class="gt-hide-tablet">Вход / регистрация</span>
-                            </a>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:system.auth.form",
+                                "top_auth",
+                                array(
+                                    "FORGOT_PASSWORD_URL" => "",
+                                    "PROFILE_URL" => SITE_DIR."personal",
+                                    "REGISTER_URL" => SITE_DIR."personal/",
+                                    "SHOW_ERRORS" => "N",
+                                    "COMPONENT_TEMPLATE" => "top_auth"
+                                ),
+                                false
+                            );?>
 
                             <div class="gt-show-mobile gt-icons-mobile ">
                                 <a href="#" class="gt-ico">
@@ -103,11 +149,19 @@
                         <a href="<?=SITE_DIR;?>catalog/" class="gt-catalog-toggler">Каталог товаров</a>
                     </td>
                     <td class="gt-search-top">
-                        <div class="gt-input gt-searchbox">
-                            <input type="text" id="gt-search" placeholder="Поиск товаров и брендов" />
-                            <input name="s" type="submit" class="gt-button gt-btn-blue gt-btn-search" value="" />
-                        </div>
-
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_RECURSIVE" => "Y",
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "COMPOSITE_FRAME_MODE" => "A",
+                                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => SITE_DIR."include/header/bitrix_search_title.php"
+                            )
+                        );?>
                     </td>
                     <td class="gt-header-phone">
 
@@ -115,9 +169,32 @@
                         <span>Вам перезвонить?</span>
                     </td>
                     <td class="gt-subheader-icons">
+                        <a href="<?=SITE_DIR?>catalog/favorite/" class="gt-ico">
+                            <?
+                            $mas_forewer_cookie = explode("|", $_COOKIE['FOREVER']);
+                            $mas_ok = array();
+                            foreach ($mas_forewer_cookie as $value) {
+                                if (!empty($value)) {
+                                    $mas_ok[] = $value;
+                                }
+                            }
+                            ?>
+                            <ico class="gt-ico-favorite"></ico><span>Избранное</span>
+                        </a>
                         <a href="#" class="gt-ico">
-                            <ico class="gt-ico-favorite"></ico><span>Избранное</span></a>
-                        <a href="#" class="gt-ico">
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_RECURSIVE" => "Y",
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "COMPOSITE_FRAME_MODE" => "A",
+                                    "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => SITE_DIR."include/header/bitrix_catalog_compare_list.php"
+                                )
+                            );?>
                             <ico class="gt-ico-poll"></ico><span>Сравнение</span></a>
                         <a href="#" class="gt-ico">
                             <ico class="gt-ico-cart"></ico><span>Корзина</span></a>

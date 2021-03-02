@@ -13,16 +13,42 @@ $cur = $APPLICATION->GetCurDir();
 
 <? if($arResult["FORM_TYPE"] == "login"): ?>
 
-    <a href="<?=SITE_DIR?>auth/?login=yes" <?if(($cur == '/auth/') && ($_GET['login'] == 'yes')):?>class="selected"<?endif;?>><?=GetMessage("AUTH_ENTER")?></a>
+    <a
+        href="<?=SITE_DIR?>auth/?login=yes"
+        class="gt-ico gt-ico-user <?if(($cur == '/auth/') && ($_GET['login'] == 'yes')):?>selected<?endif;?>"
+        style="margin-right: 0;"
+    >
+        <span class="gt-hide-tablet"><?=GetMessage("AUTH_ENTER")?></span>
+    </a>
 
     <?if($arResult["NEW_USER_REGISTRATION"] == "Y"):?>
-        <span>/ </span><a <?if(($cur == '/auth/') && ($_GET['register'] == 'yes')):?>class="selected"<?endif;?> href="<?=SITE_DIR?>auth/?register=yes" ><?=GetMessage("AUTH_REGISTER")?></a>
+    <span style="color: #4798DE; font-size: 13px;"> / </span>
+    <a
+        class="gt-ico <?if(($cur == '/auth/') && ($_GET['register'] == 'yes')):?>selected<?endif;?>"
+        href="<?=SITE_DIR?>auth/?register=yes"
+        style="margin-left: 0;"
+    >
+        <span class="gt-hide-tablet"><?=GetMessage("AUTH_REGISTER")?></span>
+    </a>
     <?endif;?>
 
 <? else: ?>
 
-    <a href="<?=SITE_DIR?>personal/" title="<?=GetMessage("AUTH_PROFILE")?>"><?=$arResult["USER_NAME"]?></a>
-    <span>/ </span>
-    <a class="logout" href="<?=$APPLICATION->GetCurPageParam("logout=yes", Array("logout"))?>"><?=GetMessage("AUTH_LOGOUT_BUTTON")?></a>
+    <a
+        class="gt-ico gt-ico-user"
+        href="<?=SITE_DIR?>personal/"
+        title="<?=GetMessage("AUTH_PROFILE")?>"
+        style="margin-right: 0;"
+    >
+            <?=$arResult["USER_NAME"]?>
+    </a>
+    <span style="color: #4798DE; font-size: 13px;"> / </span>
+    <a
+        class="gt-ico logout"
+        href="<?=$APPLICATION->GetCurPageParam("logout=yes", Array("logout"))?>"
+        style="margin-left: 0;"
+    >
+        <?=GetMessage("AUTH_LOGOUT_BUTTON")?>
+    </a>
 
 <? endif; ?>

@@ -5,7 +5,8 @@ if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\M
 { return false;}?>
 
 <?if (!empty($arResult)):?>
-<ul class="top-menu">
+<!--<ul class="top-menu">-->
+<ul class="gt-menu">
 
 <?
 foreach($arResult as $arItem):

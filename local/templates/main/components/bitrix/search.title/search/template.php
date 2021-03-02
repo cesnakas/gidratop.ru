@@ -27,11 +27,16 @@ if(strlen($CONTAINER_ID) <= 0)
 $CONTAINER_ID = CUtil::JSEscape($CONTAINER_ID);
 
 if($arParams["SHOW_INPUT"] !== "N"):?>
-	<div id="<?echo $CONTAINER_ID?>">
+<div id="<?echo $CONTAINER_ID?>">
 	<form action="<?echo $arResult["FORM_ACTION"]?>">
-		<div class="header_search_cont"><input id="<?echo $INPUT_ID?>" type="text" name="q" value="" maxlength="50" autocomplete="off" placeholder="<?=GetMessage("CT_BST_SEARCH_PLACEHOLDER");?>" /><input name="s" type="submit" value="<?=GetMessage("CT_BST_SEARCH_BUTTON");?>" /></div>
+
+		<div class="gt-input gt-searchbox">
+            <input id="<?=$INPUT_ID;?><?/*gt-search*/?>" type="text" name="q" value="" autocomplete="off" placeholder="<?/*=GetMessage("CT_BST_SEARCH_PLACEHOLDER");*/?>Поиск товаров и брендов" />
+            <input name="s" type="submit" class="gt-button gt-btn-blue gt-btn-search" value="<?/*=GetMessage("CT_BST_SEARCH_BUTTON");*/?>" />
+        </div>
+
 	</form>
-	</div>
+</div>
 <?endif?>
 <script>
 	BX.ready(function(){

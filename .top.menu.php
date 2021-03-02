@@ -1,14 +1,21 @@
 <?
 $aMenuLinks = Array(
-	Array(
-		"Производители", 
+    Array(
+        "О нас",
+        "about/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+		"Производители",
 		"proizvoditeli/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Доставка", 
+		"Доставка",
 		"dostavka/", 
 		Array(), 
 		Array(), 

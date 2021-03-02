@@ -1,0 +1,31 @@
+@media (max-width: 1340px) {
+    .gt-search-top {
+        width: initial;
+    }
+}
+
+@media (max-width: 1140px) {
+    .gt-menu>li {
+        float: left;
+        margin: 0px 10px;
+    }
+    .gt-subheader-icons>a.gt-ico {
+        margin: 0px 10px;
+    }
+    .gt-popular-item>a {
+        max-width: 260px;
+        height: 200px;
+    }
+    .gt-popular-item>a>img {
+        margin-bottom: 30px;
+        width: initial;
+        height: 65%;
+    }
+    .gt-popular-item>a>span {
+        font-size: 16px;
+        line-height: 20px;
+        height: 40px;
+        overflow: hidden;
+        bottom: 0px;
+    }
+}

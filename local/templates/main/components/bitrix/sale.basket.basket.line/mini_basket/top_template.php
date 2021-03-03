@@ -7,13 +7,15 @@
  */
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 ?>
-<div class="bx-hdr-profile">
 
-        <div class="bx-basket-block"><?
-            if (!$compositeStub)
-            {
-                echo $arResult['NUM_PRODUCTS'];
-            }?>
-        </div>
+<div class="bx-hdr-profile">
+    <ico class="gt-ico-cart"></ico>
+
+    <span class="bx-basket-block">
+        <?=\Bitrix\Main\Localization\Loc::getMessage('TSB1_CART')?>
+        <? if (!$compositeStub) {
+            echo $arResult['NUM_PRODUCTS'];
+        } ?>
+    </span>
 
 </div>

@@ -27,4 +27,4 @@ $APPLICATION->IncludeComponent(
         "AJAX_OPTION_ADDITIONAL" => ""
     ),
     false
-); ?>
+);

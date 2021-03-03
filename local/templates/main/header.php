@@ -181,7 +181,7 @@
                             ?>
                             <ico class="gt-ico-favorite"></ico><span>Избранное</span>
                         </a>
-                        <a href="#" class="gt-ico">
+                        <a href="<?=SITE_DIR?>catalog/compare/" class="gt-ico">
                             <?$APPLICATION->IncludeComponent(
                                 "bitrix:main.include",
                                 "",
@@ -195,42 +195,37 @@
                                     "PATH" => SITE_DIR."include/header/bitrix_catalog_compare_list.php"
                                 )
                             );?>
-                            <ico class="gt-ico-poll"></ico><span>Сравнение</span>
                         </a>
-                        <a href="#" class="gt-ico">
-                            <?/* $APPLICATION->IncludeComponent(
-                                "bitrix:sale.basket.basket.line",
-                                "mini_basket",
-                                Array(
-                                    "HIDE_ON_BASKET_PAGES" => "Y",
-                                    "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
-                                    "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
-                                    "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
-                                    "PATH_TO_PROFILE" => SITE_DIR . "personal/",
-                                    "PATH_TO_REGISTER" => SITE_DIR . "login/",
-                                    "POSITION_FIXED" => "N",
-                                    "POSITION_HORIZONTAL" => "right",
-                                    "POSITION_VERTICAL" => "top",
-                                    "SHOW_AUTHOR" => "N",
-                                    "SHOW_DELAY" => "N",
-                                    "SHOW_EMPTY_VALUES" => "Y",
-                                    "SHOW_IMAGE" => "Y",
-                                    "SHOW_NOTAVAIL" => "N",
-                                    "SHOW_NUM_PRODUCTS" => "Y",
-                                    "SHOW_PERSONAL_LINK" => "N",
-                                    "SHOW_PRICE" => "Y",
-                                    "SHOW_PRODUCTS" => "Y",
-                                    "SHOW_SUMMARY" => "Y",
-                                    "SHOW_TOTAL_PRICE" => "Y",
-                                    "COMPONENT_TEMPLATE" => ".default",
-                                    "PATH_TO_AUTHORIZE" => "",
-                                    "SHOW_SUBSCRIBE" => "N",
-                                ),
-                                false
-                            ); */?>
-                            <ico class="gt-ico-cart"></ico><span>Корзина</span>
-                        </a>
-
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:sale.basket.basket.line",
+                            "mini_basket",
+                            Array(
+                                "HIDE_ON_BASKET_PAGES" => "Y",
+                                "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
+                                "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
+                                "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                                "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                                "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                                "POSITION_FIXED" => "N",
+                                "POSITION_HORIZONTAL" => "right",
+                                "POSITION_VERTICAL" => "top",
+                                "SHOW_AUTHOR" => "N",
+                                "SHOW_DELAY" => "N",
+                                "SHOW_EMPTY_VALUES" => "Y",
+                                "SHOW_IMAGE" => "Y",
+                                "SHOW_NOTAVAIL" => "N",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_PRICE" => "Y",
+                                "SHOW_PRODUCTS" => "Y",
+                                "SHOW_SUMMARY" => "Y",
+                                "SHOW_TOTAL_PRICE" => "Y",
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "PATH_TO_AUTHORIZE" => "",
+                                "SHOW_SUBSCRIBE" => "N",
+                            ),
+                            false
+                        ); ?>
                     </td>
                 </tr>
                 </tbody>
@@ -251,7 +246,7 @@
             </a>
 
             <a href="#" class="gt-ico">
-                <img src="img/images/logo_small.png" alt="">
+                <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/logo_small.png" alt="">
                 <span>Главная</span>
             </a>
 
@@ -266,3 +261,5 @@
             </a>
         </div>
     </div>
+
+    <main>

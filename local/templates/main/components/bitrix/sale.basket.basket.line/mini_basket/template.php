@@ -18,27 +18,31 @@ else
 {
 	$cartStyle .= ' bx-opener';
 }
-?><script>
-var <?=$cartId?> = new BitrixSmallCart;
-</script>
-<a class="header_basket_link" href="<?= $arParams['PATH_TO_BASKET'] ?>"></a>
-<div class="basket_icon_box" id="open__basket" >
-<div id="<?=$cartId?>" class="<?=$cartStyle?>">
-
-    <?
-	/** @var \Bitrix\Main\Page\FrameBuffered $frame */
-	$frame = $this->createFrame($cartId, false)->begin();
-		require(realpath(dirname(__FILE__)).'/ajax_template.php');
-	$frame->beginStub();
-		$arResult['COMPOSITE_STUB'] = 'Y';
-		require(realpath(dirname(__FILE__)).'/top_template.php');
-		unset($arResult['COMPOSITE_STUB']);
-	$frame->end();
 ?>
 
-</div>
-</div>
-<div class="header_icons_text"><?=\Bitrix\Main\Localization\Loc::getMessage('TSB1_CART')?></div>
+<script>
+var <?=$cartId?> = new BitrixSmallCart;
+</script>
+
+<a class="gt-ico header_basket_link" href="<?= $arParams['PATH_TO_BASKET'] ?>">
+
+    <div class="basket_icon_box" id="open__basket">
+        <div id="<?=$cartId?>" class="<?=$cartStyle?>">
+        <?
+            /** @var \Bitrix\Main\Page\FrameBuffered $frame */
+            $frame = $this->createFrame($cartId, false)->begin();
+                require(realpath(dirname(__FILE__)).'/ajax_template.php');
+            $frame->beginStub();
+                $arResult['COMPOSITE_STUB'] = 'Y';
+                require(realpath(dirname(__FILE__)).'/top_template.php');
+                unset($arResult['COMPOSITE_STUB']);
+            $frame->end();
+        ?>
+        </div>
+    </div>
+
+</a>
+
 <script type="text/javascript">
 	<?=$cartId?>.siteId       = '<?=SITE_ID?>';
 	<?=$cartId?>.cartId       = '<?=$cartId?>';

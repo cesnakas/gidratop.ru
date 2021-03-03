@@ -29,4 +29,3 @@ $aMenuLinks = Array(
 		"" 
 	)
 );
-?>

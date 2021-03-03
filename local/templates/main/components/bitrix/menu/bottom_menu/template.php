@@ -5,8 +5,9 @@ if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\M
 { return false;}?>
 
 <?if (!empty($arResult)):?>
-    <div class="title_box"><?=GetMessage("TITLE_BOTTOM_MENU");?></div>
-    <ul class="footer-menu">
+<div class="gt-footer-title"><?=GetMessage("TITLE_BOTTOM_MENU");?></div>
+
+<ul class="gt-footer-menu">
 
 <?
 foreach($arResult as $arItem):
@@ -21,5 +22,5 @@ foreach($arResult as $arItem):
 	
 <?endforeach?>
 
-    </ul>
+</ul>
 <?endif?>

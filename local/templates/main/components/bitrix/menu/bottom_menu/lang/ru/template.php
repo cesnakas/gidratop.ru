@@ -1,2 +1,2 @@
 <?php
-$MESS ['TITLE_BOTTOM_MENU'] = "Категории";
+$MESS ['TITLE_BOTTOM_MENU'] = "ПОКУПАТЕЛЮ";

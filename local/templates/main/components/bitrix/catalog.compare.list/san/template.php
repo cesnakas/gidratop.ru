@@ -14,18 +14,32 @@ $this->setFrameMode(true);
 $containerId = "catalog-compare-list" . $this->randString();
 ?>
 
+    <ico class="gt-ico-poll"></ico>
+    <span>
+        <?=GetMessage("COMPARE");?>
+        <? if (count($arResult) > 0) {
+            echo count($arResult);
+        } elseif (count($arResult) == 0) {
+            echo 0;
+        } elseif ($_REQUEST['action_del'] == "DELETE_COMPARE") {
+            echo 0;
+        } ?>
+    </span>
+
+<?/*
+
 <div class="emarket-compare-list circle-num" id="<? echo $containerId ?>">
     <? $frame = $this->createFrame($containerId)->begin(''); ?>
     <div class="btn_sravnenie">
-            <span>
-                <? if (count($arResult) > 0) {
-                    echo count($arResult);
-                } elseif (count($arResult) == 0) {
-                    echo 0;
-                } elseif ($_REQUEST['action_del'] == "DELETE_COMPARE") {
-                    echo 0;
-                } ?>
-            </span>
+        <span>
+            <? if (count($arResult) > 0) {
+                echo count($arResult);
+            } elseif (count($arResult) == 0) {
+                echo 0;
+            } elseif ($_REQUEST['action_del'] == "DELETE_COMPARE") {
+                echo 0;
+            } ?>
+        </span>
     </div>
 
 
@@ -63,13 +77,17 @@ $containerId = "catalog-compare-list" . $this->randString();
                                  title="<?= GetMessage('CATALOG_DELETE') ?>"></div>
                         </li>
                     <? endforeach; ?>
-                    <? if (count($sect) > 1):?>
+                    <? if (count($sect) > 1): ?>
                         <li class="btn-item">
-                            <a class="link-compare em_button" title="<?= GetMessage("CATALOG_COMPARE") ?>"
-                               href="<?=SITE_DIR?>catalog/compare/<? /*=$arParams['COMPARE_URL']*/
-                               ?>?SECTION=<?= $key ?>"><?= GetMessage("CATALOG_COMPARE") ?></a>
+                            <a
+                                class="link-compare em_button"
+                                title="<?=GetMessage("CATALOG_COMPARE")?>"
+                                href="<?=SITE_DIR?>catalog/compare/<?=$arParams['COMPARE_URL']?>?SECTION=<?=$key?>"
+                            >
+                                <?= GetMessage("CATALOG_COMPARE") ?>
+                            </a>
                         </li>
-                    <? else:?>
+                    <? else: ?>
                         <li class="btn-item">
                             <a class="link-compare em_button disabled" title="<?= GetMessage("CATALOG_COMPARE") ?>"
                                href="#"><?= GetMessage("CATALOG_COMPARE") ?></a>
@@ -81,3 +99,4 @@ $containerId = "catalog-compare-list" . $this->randString();
     <? endif; ?>
     <? $frame->end(); ?>
 </div>
+*/?>

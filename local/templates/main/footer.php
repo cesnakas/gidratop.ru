@@ -1,5 +1,7 @@
 <?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)die();?>
 
+    </main>
+
     <footer class="footer">
         <div class="gt-container">
             <div class="gt-footer-row gt-footer-main">
@@ -14,10 +16,15 @@
                         </div>
 
                         <div class="gt-info-content gt-flex-row">
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_vk.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_ig.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_fb.png" alt="" /></a>
-
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_vk.png" alt="" />
+                            </a>
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_ig.png" alt="" />
+                            </a>
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_socmedia/ico_fb.png" alt="" />
+                            </a>
                         </div>
                     </div>
 
@@ -26,10 +33,15 @@
                             Мы принимаем
                         </div>
                         <div class="gt-info-content gt-flex-row">
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_visa.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_master.png" alt="" /></a>
-                            <a href="#" class="gt-ico"><img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_mir.png" alt="" /></a>
-
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_visa.png" alt="" />
+                            </a>
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_master.png" alt="" />
+                            </a>
+                            <a href="#" class="gt-ico">
+                                <img src="<?=SITE_TEMPLATE_PATH;?>/img/icons/ico_payments/ico_mir.png" alt="" />
+                            </a>
                         </div>
                     </div>
 
@@ -49,8 +61,27 @@
                     </ul>
                 </div>
                 <div class="gt-footer-block">
-                    <div class="gt-footer-title">ПОКУПАТЕЛЮ</div>
-                    <ul class="gt-footer-menu">
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "bottom_menu",
+                        array(
+                            "ROOT_MENU_TYPE" => "bottom",
+                            "MAX_LEVEL" => "1",
+                            "CHILD_MENU_TYPE" => "bottom",
+                            "USE_EXT" => "N",
+                            "DELAY" => "N",
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "MENU_CACHE_TYPE" => "N",
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "COMPONENT_TEMPLATE" => "bottom_menu"
+                        ),
+                        false
+                    ); ?>
+
+                    <!--<ul class="gt-footer-menu">
                         <li>
                             <a href="#">Доставка</a>
                         </li>
@@ -66,11 +97,30 @@
                         <li>
                             <a href="#">Статьи</a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
                 <div class="gt-footer-block">
-                    <div class="gt-footer-title">КОМПАНИЯ</div>
-                    <ul class="gt-footer-menu">
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "bottom_menu_two",
+                        array(
+                            "ROOT_MENU_TYPE" => "bottom_two",
+                            "MAX_LEVEL" => "1",
+                            "CHILD_MENU_TYPE" => "bottom",
+                            "USE_EXT" => "N",
+                            "DELAY" => "N",
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "MENU_CACHE_TYPE" => "N",
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "COMPONENT_TEMPLATE" => "bottom_menu_two"
+                        ),
+                        false
+                    ); ?>
+
+                    <!--<ul class="gt-footer-menu">
                         <li>
                             <a href="#">О нас</a>
                         </li>
@@ -86,7 +136,7 @@
                         <li>
                             <a href="#">Обратная связь</a>
                         </li>
-                    </ul>
+                    </ul>-->
 
                 </div>
             </div>

@@ -5,8 +5,9 @@ CHTTP::SetStatus("404 Not Found");
 @define("ERROR_404","Y");
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
-$APPLICATION->SetTitle("Страница не найдена");?>
+$APPLICATION->SetTitle("Страница не найдена");
+echo '<section class="gt-container">';
+?>
 
 	<div class="bx-404-container">
 		<div class="bx-404_left">
@@ -22,12 +23,7 @@ $APPLICATION->SetTitle("Страница не найдена");?>
             <div class="bx-404_left_main">Для того чтобы найти интересующую вас информацию, воспользуйтесь строкой поиска или <a href="<?=SITE_DIR?>"> перейдите на главную страницу </a></div>
         </div>
         <div class="bx-404_right">404</div>
-
-
-
-
 	</div>
-
 
 <!--	<div class="col-sm-offset-2 col-sm-4">-->
 <!--		<div class="bx-map-title"><i class="fa fa-leanpub"></i> Каталог</div>-->
@@ -79,4 +75,8 @@ $APPLICATION->SetTitle("Страница не найдена");?>
 //			false
 //		);?>
 <!--	</div>-->
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

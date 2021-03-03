@@ -1,10 +1,24 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
+$APPLICATION->SetTitle("Gidratop");
 ?>
 
     <section class="gt-section" id="gt-section-slider">
         <div class="slides">
+
+            <div class="gt-slide-item">
+                <div class="gt-slider-slide">
+                    <div class="gt-slide-background">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/slider/slide1.jpg" alt="" />
+                    </div>
+                    <div class="gt-slide-caption">
+                        <p>Скидки на мебель для ванной комнаты</p>
+                        <p class="green">до 10%</p>
+                        <a href="#" class="gt-button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="gt-slide-item">
                 <div class="gt-slider-slide">
                     <div class="gt-slide-background">
@@ -31,19 +45,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                 </div>
             </div>
 
-
-            <div class="gt-slide-item">
-                <div class="gt-slider-slide">
-                    <div class="gt-slide-background">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/images/slider/slide1.jpg" alt="" />
-                    </div>
-                    <div class="gt-slide-caption">
-                        <p>Скидки на мебель для ванной комнаты</p>
-                        <p class="green">до 10%</p>
-                        <a href="#" class="gt-button">Подробнее</a>
-                    </div>
-                </div>
-            </div>
         </div>
         <script type="text/javascript">
             var sliderMain = new CustomSlider({

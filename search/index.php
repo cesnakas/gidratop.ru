@@ -1,8 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
-
+echo '<section class="gt-container">';
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:search.page", 
 	"template", 
@@ -57,4 +58,9 @@ $APPLICATION->SetTitle("Поиск");
 		"COMPONENT_TEMPLATE" => "template"
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

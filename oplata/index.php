@@ -2,7 +2,10 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Оплата -  Интернет-магазин европейской сантехники");
 $APPLICATION->SetTitle("Оплата -  Интернет-магазин европейской сантехники");
-echo ' <div class="static_page">'?><h1>Оплата</h1>
+echo '<section class="gt-container">'
+?>
+
+    <h1>Оплата</h1>
 <p>
  <b>При доставке по Санкт-Петербургу покупка оплачивается по факту вручения:</b>
 </p>
@@ -39,4 +42,9 @@ echo ' <div class="static_page">'?><h1>Оплата</h1>
 <div class="select_text">
 	 Заказанный товар должен быть оплачен в течение трех банковских дней. В случае нарушения срока оплаты Продавец вправе по своему выбору: отказаться от поставки товара и вернуть Покупателю полученные денежные средства или увеличить срок доставки на период равный просрочке оплаты.
 </div>
- <br><?echo "</div>"; require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

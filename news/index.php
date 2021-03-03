@@ -4,7 +4,10 @@ $APPLICATION->SetPageProperty("keywords", "Новости-интернет-ма�
 $APPLICATION->SetPageProperty("description", "Новости-интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("title", "Новости -  Конверсионный интернет-магазин сантехники «Крайт: Сантехника.Special-Flat». Маркетплейс 1С-Битрикс");
 $APPLICATION->SetTitle("Новости- интернет-магазин европейской сантехники");
-?><?$APPLICATION->IncludeComponent(
+echo '<section class="gt-container">'
+?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"razdel_news", 
 	array(
@@ -102,4 +105,9 @@ $APPLICATION->SetTitle("Новости- интернет-магазин евро
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

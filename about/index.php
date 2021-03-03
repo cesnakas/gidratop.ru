@@ -1,7 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
-echo ' <div class="static_page">'?><h1 class="title">О компании</h1>
+
+echo '<section class="gt-container">'
+?>
+
+
+
+    <h1 class="title">О компании</h1>
 <p>
  <b>Мы рады приветствовать вас на сайте нашей компании!</b>
 </p>
@@ -38,4 +44,9 @@ echo ' <div class="static_page">'?><h1 class="title">О компании</h1>
 <p class="select_text">
 	 Мы всегда рады общению с нашими клиентами. Если у вас есть какие-либо пожелания, предложения, замечания, касающиеся работы нашего Интернет-магазина - пишите нам, и мы с благодарностью примем ваше мнение во внимание: <b> Электронная почта</b>: <a href="mailto:admin@gidratop.ru">admin@gidratop.ru</a>
 </p>
- <br><?echo "</div>"; require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

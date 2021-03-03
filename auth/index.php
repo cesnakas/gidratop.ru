@@ -5,6 +5,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $userName = CUser::GetFullName();
 if (!$userName)
 	$userName = CUser::GetLogin();
+
+echo '<section class="gt-container">'
 ?>
 
 <script>
@@ -30,5 +32,6 @@ LocalRedirect(SITE_DIR);
 <p><a href="<?=SITE_DIR?>">Вернуться на главную страницу</a></p>
 
 <?
+echo '</section>';
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

@@ -4,7 +4,10 @@ $APPLICATION->SetPageProperty("description", "Контакты - интерне�
 $APPLICATION->SetPageProperty("keywords", "Контакты - интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("title", "Контакты - интернет-магазин европейской сантехники");
 $APPLICATION->SetTitle("Контакты - Интернет-магазин европейской сантехники");
-?><div class="contacts">
+echo '<section class="gt-container">'
+?>
+
+    <div class="contacts">
 	<h1>Контакты</h1>
 	<div class="row">
 		<div class="col-md-5 col-sm-4 col-xs-12">
@@ -59,4 +62,9 @@ $APPLICATION->SetTitle("Контакты - Интернет-магазин ев�
 	</div>
  <br>
 </div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

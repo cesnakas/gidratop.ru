@@ -4,7 +4,9 @@ $APPLICATION->SetPageProperty("description", "Интернет-магазин е
 $APPLICATION->SetPageProperty("keywords", "Интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("title", "Производители - Интернет-магазин европейской сантехники");
 $APPLICATION->SetTitle("Производители -  Интернет-магазин европейской сантехники");
+echo '<section class="gt-container">'
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"krayt:brend", 
 	".default", 
@@ -48,4 +50,9 @@ $APPLICATION->SetTitle("Производители -  Интернет-мага�
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+echo '</section>';
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

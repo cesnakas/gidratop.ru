@@ -1,0 +1,28 @@
+.catalog-top-header{
+	font-size:14px;
+	font-weight: bold;
+	text-align: left;
+	margin:5px 0;
+	padding:5px 15px;
+	border-bottom: 2px solid #d9dee6;
+	color: #000;
+}
+
+.top_akcii .elemrnt_box .product-item-container {
+	padding: 5px;
+}
+
+.rec_tovar_glav .owl-carousel .owl-stage-outer,
+.top_akcii .owl-carousel .owl-stage-outer {
+	padding: 5px 0 100px 0;
+}
+.card_prop_box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+.price_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

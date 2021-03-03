@@ -80,24 +80,6 @@
                         ),
                         false
                     ); ?>
-
-                    <!--<ul class="gt-footer-menu">
-                        <li>
-                            <a href="#">Доставка</a>
-                        </li>
-                        <li>
-                            <a href="#">Оплата</a>
-                        </li>
-                        <li>
-                            <a href="#">Гарантии и возврат</a>
-                        </li>
-                        <li>
-                            <a href="#">Производители</a>
-                        </li>
-                        <li>
-                            <a href="#">Статьи</a>
-                        </li>
-                    </ul>-->
                 </div>
                 <div class="gt-footer-block">
                     <? $APPLICATION->IncludeComponent(
@@ -119,25 +101,6 @@
                         ),
                         false
                     ); ?>
-
-                    <!--<ul class="gt-footer-menu">
-                        <li>
-                            <a href="#">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
-                        </li>
-                        <li>
-                            <a href="#">Пользовательское соглашение</a>
-                        </li>
-                        <li>
-                            <a href="#">Политика конфиденциальности</a>
-                        </li>
-                        <li>
-                            <a href="#">Обратная связь</a>
-                        </li>
-                    </ul>-->
-
                 </div>
             </div>
 

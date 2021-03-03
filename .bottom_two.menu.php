@@ -7,30 +7,30 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
+    Array(
+        "Контакты",
+        "contacts/",
+        Array(),
+        Array(),
+        ""
+    ),
 	Array(
-		"Доставка", 
-		"dostavka/",
+		"Пользовательское соглашение",
+		"/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Оплата", 
-		"oplata/",
+		"Политика конфиденциальности",
+		"/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Новости", 
-		"news/",
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"contacts/",
+		"Обратная связь",
+		"#",
 		Array(), 
 		Array(), 
 		"" 

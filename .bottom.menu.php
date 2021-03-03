@@ -1,29 +1,29 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Все разделы", 
-		"catalog/", 
+		"Доставка",
+		"dostavka/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Ванны", 
-		"catalog/vanny/", 
+		"Оплата",
+		"oplata/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Унитазы", 
-		"catalog/unitazy/", 
+		"Производители",
+		"proizvoditeli/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Смесители", 
-		"catalog/smesiteli/", 
+		"Статьи",
+		"news/",
 		Array(), 
 		Array(), 
 		"" 

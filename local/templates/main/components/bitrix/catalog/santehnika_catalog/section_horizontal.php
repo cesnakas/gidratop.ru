@@ -23,38 +23,93 @@ if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMO
 } else {
     $section_podborka = $arResult["VARIABLES"]["SECTION_CODE"];
 } ?>
+
 <?
 $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTION_ID'],$arParams['IBLOCK_ID']);
 ?>
 
-<div class="gt-container">
-    <div class="gt-breadcrumbs-holder">
-        <ul class="gt-breadcrumbs">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Ванны</a></li>
-        </ul>
+<section class="gt-section">
+    <div class="gt-container">
+
+        <div class="gt-breadcrumbs-holder">
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "catalog",
+                Array(
+                    "START_FROM" => "0",
+                    "PATH" => "",
+                    "SITE_ID" => "s1"
+                ),
+                $component,
+                array('HIDE_ICONS' => 'Y')
+            );?>
+        </div>
+
+        <div class="gt-section-title">
+            <h2><?$APPLICATION->ShowTitle(false)?></h2>
+            <div class="bg-text"><?$APPLICATION->ShowTitle(false)?></div>
+        </div>
+
+        <div class="gt-page-catalog">
+            <div class="gt-catalog-aside" id="gt-catalog-filters">
+
+                <? if ($isFilter): ?>
+                <div class="bx-filter-container-box">
+                    <?
+                    $GLOBALS['PREFILTERSECTION'] = array("PROPERTY_NO_CATALOG" => false);
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:catalog.smart.filter",
+                        "santechika",
+                        array(
+                            "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+                            "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                            "SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
+                            "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+                            "FILTER_NAME" => $arParams["FILTER_NAME"],
+                            "PRICE_CODE" => $arParams["PRICE_CODE"],
+                            "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                            "CACHE_TIME" => $arParams["CACHE_TIME"],
+                            "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+                            "SAVE_IN_SESSION" => "N",
+                            "FILTER_VIEW_MODE" => "HORIZONTAL",
+                            "XML_EXPORT" => "Y",
+                            "SECTION_TITLE" => "NAME",
+                            "SECTION_DESCRIPTION" => "DESCRIPTION",
+                            'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
+                            "TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
+                            'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
+                            'CURRENCY_ID' => $arParams['CURRENCY_ID'],
+                            "SEF_MODE" => "N",
+                            "SEF_RULE" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["smart_filter"],
+                            "SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
+                            "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+                            "INSTANT_RELOAD" => $arParams["INSTANT_RELOAD"],
+                            "DISPLAY_ELEMENT_COUNT" => "N",
+                            "PREFILTER_NAME" => "PREFILTERSECTION"
+                        ),
+                        $component,
+                        array('HIDE_ICONS' => 'Y')
+                    );
+                    ?>
+                </div>
+                <? endif; ?>
+
+            </div>
+            <div class="gt-catalog-content">
+                ...
+            </div>
+        </div>
+
     </div>
-    <div class="gt-section-title">
-        <h2><?$APPLICATION->ShowTitle(false)?></h2>
-        <div class="bg-text"><?$APPLICATION->ShowTitle(false)?></div>
-    </div>
-</div>
+</section>
 
 <!--//-->
 
-<div
-    class="top_banner"
-    <? if ($top_banner): ?>
-        style="background-image:url(<?=$top_banner?>)"
-    <? endif; ?>
->
-    <h1 class="title"><?$APPLICATION->ShowTitle(false)?></h1>
-</div>
+<?/*
 
     <div class="left_content_block">
         <div class="left_menu_box">
-            <?/* $APPLICATION->IncludeComponent(
+            <? $APPLICATION->IncludeComponent(
                 "bitrix:menu",
                 "left_menu_catalog",
                 Array(
@@ -73,7 +128,7 @@ $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTI
                 ),
                 $component,
                 array('HIDE_ICONS' => 'Y')
-            ); */?>
+            ); ?>
         </div>
 
         <? $APPLICATION->IncludeComponent(
@@ -285,6 +340,7 @@ $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTI
             array('HIDE_ICONS' => 'Y')
         ); ?>
     </div>
+
     <div class="right_content_block">
         <div class="">
             <div class="podborki-container">
@@ -824,3 +880,5 @@ $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTI
 
 
     </div>
+
+*/?>

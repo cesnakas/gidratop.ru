@@ -20,8 +20,8 @@ $templateData = array(
 if (isset($templateData['TEMPLATE_THEME'])) {
     $this->addExternalCss($templateData['TEMPLATE_THEME']);
 }
-$this->addExternalCss("/bitrix/css/main/bootstrap.css");
-$this->addExternalCss("/bitrix/css/main/font-awesome.css");
+// $this->addExternalCss("/bitrix/css/main/bootstrap.css");
+// $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 ?>
 
 <div class="title-open_filter"><?=GetMessage("TITLE_FILTER");?></div>

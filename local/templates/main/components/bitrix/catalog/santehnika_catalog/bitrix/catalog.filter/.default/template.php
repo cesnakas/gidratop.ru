@@ -18,14 +18,14 @@ if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\M
 		</tr>
 	</thead>
 	<tbody>
-		<?foreach($arResult["ITEMS"] as $arItem):?>
-			<?if(!array_key_exists("HIDDEN", $arItem)):?>
-				<tr>
-					<td valign="top"><?=$arItem["NAME"]?>:</td>
-					<td valign="top"><?=$arItem["INPUT"]?></td>
-				</tr>
-			<?endif?>
-		<?endforeach;?>
+    <?foreach($arResult["ITEMS"] as $arItem):?>
+        <?if(!array_key_exists("HIDDEN", $arItem)):?>
+            <tr>
+                <td valign="top"><?=$arItem["NAME"]?>:</td>
+                <td valign="top"><?=$arItem["INPUT"]?></td>
+            </tr>
+        <?endif?>
+    <?endforeach;?>
 	</tbody>
 	<tfoot>
 		<tr>

@@ -13,9 +13,12 @@
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-$this->addExternalCss("/bitrix/css/main/bootstrap.css"); ?>
+$this->addExternalCss("/bitrix/css/main/bootstrap.css");
+?>
+
     <div class="catalog-box">
-            <h1 class="catalog-title"><?=GetMessage("TITLE_CATALOG");?></h1>
+
+        <h1 class="catalog-title"><?=GetMessage("TITLE_CATALOG");?></h1>
 
         <?
             $APPLICATION->IncludeComponent(

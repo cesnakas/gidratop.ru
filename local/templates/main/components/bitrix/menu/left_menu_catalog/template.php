@@ -2,7 +2,8 @@
 if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\Main\Loader::MODULE_DEMO_EXPIRED || 
    \Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") ==  \Bitrix\Main\Loader::MODULE_NOT_FOUND
     )
-{ return false;}?>
+{ return false;}
+?>
 
 <?if (!empty($arResult)):?>
 <ul class="vertical-multilevel-menu" id="catalog-menu">

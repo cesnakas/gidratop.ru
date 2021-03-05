@@ -2,7 +2,9 @@
 if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\Main\Loader::MODULE_DEMO_EXPIRED || 
    \Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") ==  \Bitrix\Main\Loader::MODULE_NOT_FOUND
     )
-{ return false;}?>
+{ return false;}
+?>
+
 <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
 	<?foreach($arResult["ITEMS"] as $arItem):
 		if(array_key_exists("HIDDEN", $arItem)):

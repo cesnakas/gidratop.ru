@@ -18,7 +18,6 @@ if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMO
 }
 ?>
 
-
 <? if (empty($arResult["VARIABLES"]["SECTION_CODE"])) {
     $section_podborka = end(explode("/", $arResult["VARIABLES"]["SECTION_CODE_PATH"]));
 } else {
@@ -27,29 +26,54 @@ if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMO
 <?
 $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTION_ID'],$arParams['IBLOCK_ID']);
 ?>
-<div class="top_banner" <?if ($top_banner):?>
-     style="background-image:url(<?=$top_banner?>)"
-    <?endif?>
-><h1 class="title"><? $APPLICATION->ShowTitle(false) ?></h1></div>
+
+<div class="gt-container">
+    <div class="gt-breadcrumbs-holder">
+        <ul class="gt-breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Ванны</a></li>
+        </ul>
+    </div>
+    <div class="gt-section-title">
+        <h2><?$APPLICATION->ShowTitle(false)?></h2>
+        <div class="bg-text"><?$APPLICATION->ShowTitle(false)?></div>
+    </div>
+</div>
+
+<!--//-->
+
+<div
+    class="top_banner"
+    <? if ($top_banner): ?>
+        style="background-image:url(<?=$top_banner?>)"
+    <? endif; ?>
+>
+    <h1 class="title"><?$APPLICATION->ShowTitle(false)?></h1>
+</div>
+
     <div class="left_content_block">
         <div class="left_menu_box">
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "left_menu_catalog", Array(
-                "ROOT_MENU_TYPE" => "top_catalog",
-                "MAX_LEVEL" => "5",
-                "CHILD_MENU_TYPE" => "top_catalog",
-                "USE_EXT" => "Y",
-                "DELAY" => "N",
-                "ALLOW_MULTI_SELECT" => "Y",
-                "MENU_CACHE_TYPE" => "N",
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "MENU_CACHE_GET_VARS" => "",
-                "PODBORKA_TUPE" => $GLOBALS['PODBORKI']['TUGLE'],
-                "SECTION_PODBORKA" => $GLOBALS['PODBORKI']['SECTION_CATALOG'],
-            ),
+            <?/* $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "left_menu_catalog",
+                Array(
+                    "ROOT_MENU_TYPE" => "top_catalog",
+                    "MAX_LEVEL" => "5",
+                    "CHILD_MENU_TYPE" => "top_catalog",
+                    "USE_EXT" => "Y",
+                    "DELAY" => "N",
+                    "ALLOW_MULTI_SELECT" => "Y",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "MENU_CACHE_GET_VARS" => "",
+                    "PODBORKA_TUPE" => $GLOBALS['PODBORKI']['TUGLE'],
+                    "SECTION_PODBORKA" => $GLOBALS['PODBORKI']['SECTION_CATALOG'],
+                ),
                 $component,
                 array('HIDE_ICONS' => 'Y')
-            ); ?>
+            ); */?>
         </div>
 
         <? $APPLICATION->IncludeComponent(

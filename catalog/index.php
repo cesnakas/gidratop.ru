@@ -6,7 +6,6 @@ $APPLICATION->SetPageProperty("title", "Интернет-магазин евро
 $APPLICATION->SetTitle("Каталог");
 ?>
 
-<section class="gt-container">
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog",
         "santehnika_catalog",
@@ -667,7 +666,6 @@ $APPLICATION->SetTitle("Каталог");
         ),
         false
     );?>
-</section>
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

@@ -1,13 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("222", "333");
 $APPLICATION->SetPageProperty("description", "Интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("keywords", "Интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("title", "Производители - Интернет-магазин европейской сантехники");
 $APPLICATION->SetTitle("Производители -  Интернет-магазин европейской сантехники");
 echo '<section class="gt-container">'
-?>
-
-<?$APPLICATION->IncludeComponent(
+?><?$APPLICATION->IncludeComponent(
 	"krayt:brend", 
 	".default", 
 	array(
@@ -19,7 +18,7 @@ echo '<section class="gt-container">'
 		"SEF_MODE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"PAGER_SHOW_ALWAYS_TIP" => "Y",
-		"ELEMENT_COL" => "15",
+		"ELEMENT_COL" => "20",
 		"IBLOCK_TYPE_CATALOG" => "catalog",
 		"I_BLOCK_CATALOG" => "8",
 		"PRICE_CODE" => array(

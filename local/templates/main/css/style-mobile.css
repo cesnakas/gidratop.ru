@@ -16,6 +16,21 @@
     .gt-section {
         margin-bottom: 40px;
     }
+    .gt-separator {
+        width: 100%;
+        height: 30px;
+    }
+    .gt-separator.gt-show-mobile {
+        display: block;
+    }
+    .gt-title-blue {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .gt-text p {
+        font-size: 14px;
+        line-height: 18px;
+    }
     header>.header-top,
     .header-bottom {
         height: 55px;
@@ -33,10 +48,13 @@
     .gt-icons-mobile>a.gt-ico {
         margin: 0px 6px;
     }
+    .gt-icons-top>span {
+        display: none;
+    }
     a.gt-ico-user {
         min-width: 20px;
         height: 20px;
-        background: url(img/icons/ico_menu/ico_profile_blue.svg) 0 0 no-repeat;
+        background: url(../img/icons/ico_menu/ico_profile_blue.svg) 0 0 no-repeat;
         background-size: contain;
         padding-left: 0px;
         margin-left: 10px;
@@ -62,11 +80,15 @@
         height: 25px;
         padding: 10px 19px;
     }*/
+    #title-search {
+        width: 100%!important;
+        position: relative;
+    }
     .gt-input.gt-searchbox>input[type=text] {
         height: 25px;
         font-size: 10px;
         line-height: 13px;
-        padding-left: 10px
+        padding-left: 5px
     }
     .gt-input.gt-searchbox>.gt-button {
         height: 25px;
@@ -313,6 +335,21 @@
         margin: 10px 0;
         grid-gap: 0px;
     }
+    .gt-disclaimer-grid>.gt-disclaimer-5 {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .gt-disclaimer-grid>.gt-disclaimer-6 {
+        width: 100%;
+        margin-top: 5px;
+        padding: 1px;
+        margin-left: 0px;
+    }
+    .gt-offers-grid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 19px;
+    }
     .gt-offer {
         min-height: 100px;
     }
@@ -358,6 +395,7 @@
         overflow: scroll;
         padding: 10px;
         padding: 50px 10px;
+        max-width: 100%!important;
     }
     .gt-catalog-aside.expanded {
         display: block;
@@ -505,6 +543,46 @@
     }
     .gt-flex-table>.gt-flex-row {
         flex-direction: column;
+    }
+    .gt-brand-item {
+        width: 160px;
+        max-width: 160px;
+        height: 152px;
+        margin: 5px 0;
+        margin-left: 0px;
+    }
+    .gt-brand-item:nth-child(even) {
+        margin-left: 15px;
+    }
+    #gt-call-support-pic {
+        width: 100%;
+        background: url(../img/images/support_bg_mobile.png) 0 0 no-repeat;
+        background-position: right center;
+        background-size: cover;
+        padding: 10px 0;
+    }
+    #gt-call-support-pic>.gt-w-50 {
+        width: 100%;
+    }
+    .gt-payment-type {
+        padding: 20px 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .gt-payment-type>.gt-title-blue {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+    .gt-payment-type strong {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    #gt-section-payment {
+        background: transparent;
+    }
+    #gt-section-payment>.gt-img {
+        display: none;
     }
 }
 

@@ -28,6 +28,8 @@ if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMO
 $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTION_ID'],$arParams['IBLOCK_ID']);
 ?>
 
+<script>$('body').addClass('bg-lightgray');</script>
+
 <section class="gt-section">
     <div class="gt-container">
 
@@ -48,18 +50,22 @@ $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTI
         <div class="gt-section-title">
             <h2><?$APPLICATION->ShowTitle(false)?></h2>
             <div class="bg-text"><?$APPLICATION->ShowTitle(false)?></div>
+            <div class="bg-text">
+
+            </div>
         </div>
 
         <div class="gt-page-catalog">
             <div class="gt-catalog-aside" id="gt-catalog-filters">
-
                 <? if ($isFilter): ?>
-                <div class="bx-filter-container-box">
+                <!--<div class="bx-filter-container-box">-->
+
                     <?
                     $GLOBALS['PREFILTERSECTION'] = array("PROPERTY_NO_CATALOG" => false);
                     $APPLICATION->IncludeComponent(
                         "bitrix:catalog.smart.filter",
-                        "santechika",
+                        "bootstrap_v4",
+                        // "santechika",
                         array(
                             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                             "IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -91,10 +97,28 @@ $top_banner = CKrayt_specialflat::getBannerSection($arResult['VARIABLES']['SECTI
                         array('HIDE_ICONS' => 'Y')
                     );
                     ?>
-                </div>
-                <? endif; ?>
 
+                    <? $APPLICATION->IncludeComponent(
+                        "krayt:podborki",
+                        "left",
+                        Array(
+                            "CACHE_TIME" => $arParams["CACHE_TIME"],
+                            "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                            "SECTION_CODE" => $section_podborka,
+                            //"SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
+                            "CATALOG_IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                            "PODBORKI_IBLOCK_ID" => $arParams['IBLOCK_PODBORKI'],
+                            "UF_PODBORKI_FILTER"=>"left",
+
+                        ),
+                        $component,
+                        array('HIDE_ICONS' => 'Y')
+                    ); ?>
+
+                <!--</div>-->
+                <? endif; ?>
             </div>
+            <!--//-->
             <div class="gt-catalog-content">
                 ...
             </div>

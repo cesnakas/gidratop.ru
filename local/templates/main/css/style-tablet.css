@@ -34,8 +34,15 @@
         line-height: 18px;
         padding: 6px 20px;
     }
+    .gt-separator {
+        width: 100%;
+        height: 50px;
+    }
     .gt-section {
         margin-bottom: 60px;
+    }
+    .gt-section-title {
+        margin-bottom: 45px;
     }
     .gt-section-title>h2 {
         font-size: 25px;
@@ -51,6 +58,14 @@
         top: -35px;
         padding-left: 45px;
         z-index: -1;
+    }
+    .gt-title-blue {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .gt-text p {
+        font-size: 16px;
+        line-height: 20px;
     }
     .gt-price {
         font-size: 18px;
@@ -152,6 +167,9 @@
     }
     .gt-footer-logo img {
         max-width: 92%;
+    }
+    .gt-footer-info .gt-ico {
+        margin-right: 0px;
     }
     .gt-subscribe {
         width: 320px;
@@ -300,6 +318,19 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1vw;
+    }
+    .gt-disclaimer-grid>.gt-disclaimer-5 {
+        width: 100%;
+        margin-left: -15px;
+    }
+    .gt-disclaimer-grid>.gt-disclaimer-6 {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 70%;
+        margin-top: 25px;
+        padding: 1px;
+        margin-left: -19px;
     }
     .gt-offer {
         width: 100%;
@@ -452,6 +483,91 @@
     }
     .gt-owl-gallery-control .gt-owl-previews {
         margin-top: 5px;
+    }
+    .gt-brand-languages-list {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .gt-brand-language {
+        margin: 10px 10px;
+        min-width: 145px;
+        height: 26px;
+    }
+    .gt-brand-language>.gt-img {
+        width: 40px;
+        height: 26px;
+    }
+    .gt-brand-language>.gt-name {
+        padding-left: 10px;
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .gt-page-catalog.thin {
+        grid-template-columns: minmax(150px, 160px) auto;
+    }
+    .gt-brand-filter-panel {
+        font-size: 13px;
+        line-height: 17px;
+        padding-left: 26px;
+    }
+    .gt-border-table tr>td {
+        padding: 10px 0;
+    }
+    .gt-border-table .w-fixed {
+        width: 65px;
+    }
+    .gt-brand-filter-panel .letters>a {
+        margin: 0px;
+    }
+    .gt-brand-item {
+        width: 160px;
+        max-width: 160px;
+        height: 167px;
+        margin: 15px 0;
+        margin-left: 26px;
+    }
+    .gt-brand-item>.gt-c-elem>.gt-name>.gt-title {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .gt-brand-item>.gt-c-elem>.gt-name>.gt-country {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    #gt-call-support-pic {
+        width: 100%;
+        background: url(../img/images/support_bg_768.png) 0 0 no-repeat;
+        background-position: right center;
+        background-size: cover;
+        padding: 1px 0;
+    }
+    #gt-call-support-pic>.gt-w-50 {
+        width: 50%;
+    }
+    .gt-payment-list {
+        display: block!important;
+    }
+    .gt-payment-list>.gt-col-4 {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    .gt-payment-type {
+        padding: 20px 15px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .gt-payment-type>.gt-title-blue {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+    .gt-payment-type strong {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    #gt-section-payment>.gt-img {
+        width: 48%;
     }
 }
 

@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  3 => 
+  5 => 
   array (
     'CONDITION' => '#^/proizvoditeli/#',
     'RULE' => '',

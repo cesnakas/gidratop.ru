@@ -16,6 +16,7 @@ $this->setFrameMode(true);
 $this->addExternalCss("/bitrix/css/main/bootstrap.css");
 ?>
 
+<section class="gt-container">
     <div class="catalog-box">
 
         <h1 class="catalog-title"><?=GetMessage("TITLE_CATALOG");?></h1>
@@ -37,3 +38,4 @@ $this->addExternalCss("/bitrix/css/main/bootstrap.css");
         ?>
 
     </div>
+</section>

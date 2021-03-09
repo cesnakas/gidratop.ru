@@ -146,7 +146,82 @@
                 <tbody>
                 <tr>
                     <td class="gt-catalog">
-                        <a href="<?=SITE_DIR;?>catalog/" class="gt-catalog-toggler">Каталог товаров</a>
+                        <a href="#<?/*=SITE_DIR;*/?>" class="gt-catalog-toggler">Каталог товаров</a>
+                        <!--//-->
+                        <div class="gt-top-catalog-root">
+                            <ul>
+                                <li><a href="#">Аксессуары</a>
+                                    <ul class="gt-top-catalog-second">
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                        <li><a href="#">Держатели для полотенец</a></li>
+                                    </ul>
+
+                                </li>
+                                <li><a href="#">Ванны</a></li>
+                                <li><a href="#">Душ</a></li>
+                                <li><a href="#">Душевые углы и ограждения</a></li>
+                                <li><a href="#">Комплектующие для сантехники</a></li>
+                                <li><a href="#">Мебель для ванных комнат</a></li>
+                                <li><a href="#">Полотенцесушители</a></li>
+                                <li class="complex">
+                                    <a href="#">Санфаянс</a>
+                                    <div class="gt-top-catalog-menu-second">
+                                        <ul>
+                                            <li><a href="#" class="main">Биде</a></li>
+                                            <li><a href="#">Подраздел 1</a></li>
+                                            <li><a href="#">Подраздел 2</a></li>
+                                            <li><a href="#">Подраздел 3</a></li>
+                                            <li><a href="#">Подраздел 4</a></li>
+                                            <li><a href="#">Подраздел 5</a></li>
+                                        </ul>
+
+                                        <ul>
+                                            <li><a href="#" class="main">Писсуары</a></li>
+                                            <li><a href="#">Подраздел 1</a></li>
+                                            <li><a href="#">Подраздел 2</a></li>
+                                            <li><a href="#">Подраздел 3</a></li>
+                                            <li><a href="#">Подраздел 4</a></li>
+                                            <li><a href="#">Подраздел 5</a></li>
+                                        </ul>
+
+                                        <ul>
+                                            <li><a href="#" class="main">Раковины</a></li>
+                                            <li><a href="#">Подраздел 1</a></li>
+                                            <li><a href="#">Подраздел 2</a></li>
+                                            <li><a href="#">Подраздел 3</a></li>
+                                            <li><a href="#">Подраздел 4</a></li>
+                                            <li><a href="#">Подраздел 5</a></li>
+                                        </ul>
+
+                                        <ul>
+                                            <li><a href="#" class="main">Унитазы</a></li>
+                                            <li><a href="#">Подраздел 1</a></li>
+                                            <li><a href="#">Подраздел 2</a></li>
+                                            <li><a href="#">Подраздел 3</a></li>
+                                            <li><a href="#">Подраздел 4</a></li>
+                                            <li><a href="#">Подраздел 5</a></li>
+                                        </ul>
+
+                                        <ul>
+                                            <li><a href="#" class="main">Комплекты (инсталляция + унитаз)</a></li>
+                                            <li><a href="#" class="main">Унитазы - биде</a></li>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                                <li><a href="#">Системы инсталяции</a></li>
+                                <li><a href="#">Смесители</a></li>
+                                <li><a href="#">Сушилки для рук</a></li>
+                            </ul>
+                        </div>
+                        <!--//-->
                     </td>
                     <td class="gt-search-top">
                         <?$APPLICATION->IncludeComponent(

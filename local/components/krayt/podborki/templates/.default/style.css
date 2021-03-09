@@ -1,0 +1,31 @@
+.podborki_box {
+    width: 200px;
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+
+.podborki_box >.img_box > img {
+    width: 100%;
+}
+
+.osn_podborki_block > .img_box {
+    display: inline-block;
+    width: 29%;
+}
+
+.osn_podborki_block > .img_box {
+    display: inline-block;
+    width: 29%;
+}
+
+.osn_podborki_block > .osn_box {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    padding-left: 25px;
+}
+
+.osn_podborki_block >.img_box > img {
+    width: 100%;
+}

@@ -1,0 +1,121 @@
+.goods_title_box .artikul_box {
+    margin-top: 5px;
+}
+
+.bx-catalog-element .goods_block .goods_title_box .artikul_box span {
+    font-size: 14px;
+    color: #1e1e1e;
+    display: inline;
+    font-weight: 100;
+    text-transform: none;
+}
+
+.goods_block {
+    margin-top: 70px;
+}
+
+.goods_block .goods-carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.goods_block .goods_box {
+    overflow: hidden;
+    padding: 30px 50px;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+}
+
+.goods_block .goods_img {
+    float: left;
+    width: 36%;
+    margin-right: 4%;
+    text-align: center;
+    display: block;
+}
+
+.goods_block .goods_img .goods_img-box {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 80%;
+}
+
+.goods_block .goods_img .goods_img-box .img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.goods_block .goods_text,
+.goods_block .goods_data,
+.goods_block .goods_set_block {
+    float: left;
+    width: 60%;
+}
+
+.goods_block .goods_data:after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+.goods_block .goods_title_box {
+    float: left;
+    display: block;
+    width: 69%;
+    margin-right: 2%;
+}
+
+.goods_block .goods_title_box span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.goods_block .goods_title_box a {
+    font-size: 16px;
+    white-space: normal;
+}
+
+.goods_block .goods_title_box a :hover,
+.goods_block .goods_title_box a :active {
+    text-decoration: underline;
+}
+
+.owl-carousel button.owl-dot span {
+    border: 1px solid #0085cc;
+    border-radius: 50%;
+    color: transparent;
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    margin: 0 4px;
+    outline: 0;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.owl-carousel button.owl-dot {
+    outline: none !important;
+}
+
+.goods-carousel .owl-dots .owl-dot.active span, .goods-carousel .owl-dots .owl-dot:hover span {
+    background-color: #0085cc;
+}
+
+.goods-carousel .owl-nav.disabled + .owl-dots {
+    margin-top: 20px;
+}

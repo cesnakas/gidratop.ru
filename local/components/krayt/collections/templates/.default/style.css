@@ -1,0 +1,17 @@
+.heder_vision > div {
+    display: inline-block;
+}
+
+.str_vision > div {
+    display: inline-block;
+}
+
+.collection_element_block.product-carousel .card_prop_block,
+.collection_element_block.product-carousel .articul{
+    display: none;
+}
+
+.collection_element_block.product-carousel .price_cont {
+    margin-top: -25px;
+    padding-bottom: 20px;
+    }

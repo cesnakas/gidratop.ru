@@ -148,7 +148,7 @@
                     <td class="gt-catalog">
                         <a href="#<?/*=SITE_DIR;*/?>" class="gt-catalog-toggler">Каталог товаров</a>
                         <!--//-->
-                        <div class="gt-top-catalog-root">
+                        <!--<div class="gt-top-catalog-root">
                             <ul>
                                 <li><a href="#">Аксессуары</a>
                                     <ul class="gt-top-catalog-second">
@@ -220,7 +220,21 @@
                                 <li><a href="#">Смесители</a></li>
                                 <li><a href="#">Сушилки для рук</a></li>
                             </ul>
-                        </div>
+                        </div>-->
+                        <!--//-->
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_RECURSIVE" => "Y",
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "COMPOSITE_FRAME_MODE" => "A",
+                                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => SITE_DIR."include/header/krayt_new_menu_catalog.php"
+                            )
+                        );?>
                         <!--//-->
                     </td>
                     <td class="gt-search-top">

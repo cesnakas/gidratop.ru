@@ -584,6 +584,57 @@
     #gt-section-payment>.gt-img {
         display: none;
     }
+    .gt-right-image>.gt-img {
+        display: none;
+    }
+    #gt-guaranty-grid>.gt-block-1 {
+        margin-bottom: 30px;
+    }
+    .gt-delivery-block {
+        margin-bottom: 40px;
+    }
+    .gt-delivery-block>.gt-block-white,
+    .gt-delivery-block.right>.gt-block-white {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .gt-delivery-block>.image {
+        display: none;
+    }
+    #gt-tabs-delivery>.gt-tabmenu {
+        display: inline-block;
+    }
+    #gt-tabs-delivery>ul.gt-tabmenu>li {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    #gt-tabs-delivery>ul.gt-tabmenu>li>a {
+        height: 65px;
+    }
+    #delivery-1-1 .table-col-2 {
+        width: 90px;
+    }
+    #delivery-1-1 .table-col-3 {
+        width: 90px;
+    }
+    #delivery-1-1 .gt-table {
+        margin-left: -10px;
+        width: calc(100% + 21px);
+    }
+    #delivery-1-1 .gt-table-bordered th,
+    #delivery-1-1 .gt-table-bordered td {
+        border: 1px solid #F1F2F6;
+        padding: 20px 4px;
+    }
+    .gt-contacts,
+    .gt-contacts>.gt-left,
+    .gt-contacts>.gt-right {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 370px) {

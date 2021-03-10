@@ -1,21 +1,28 @@
 <?
 $aMenuLinks = Array(
-    Array(
-        "О нас",
-        "about/",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-		"Производители",
-		"proizvoditeli/",
+	Array(
+		"О нас", 
+		"about/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Доставка",
+		"Производители", 
+		"proizvoditeli/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гарантии и возврат", 
+		"/guaranty/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
 		"dostavka/", 
 		Array(), 
 		Array(), 
@@ -23,18 +30,11 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Оплата", 
-		"oplata/",
+		"oplata/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
-	 Array(
-        "Новости",
-        "news/",
-        Array(),
-        Array(),
-        ""
-    ),
 	Array(
 		"Контакты", 
 		"contacts/", 

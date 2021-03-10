@@ -67,6 +67,10 @@
         font-size: 16px;
         line-height: 20px;
     }
+    .gt-article-medium {
+        font-size: 13px;
+        line-height: 17px;
+    }
     .gt-price {
         font-size: 18px;
         line-height: 25px;
@@ -568,6 +572,48 @@
     }
     #gt-section-payment>.gt-img {
         width: 48%;
+    }
+    #gt-section-guaranty>.gt-img {
+        width: 48%;
+    }
+    #gt-tabs-guaranty>ul.gt-tabmenu>li {
+        max-width: 160px;
+        margin-right: 30px;
+        text-align: left;
+    }
+    #gt-guaranty-grid>.gt-block-1 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #gt-guaranty-grid>.gt-block-2 {
+        margin-bottom: 30px;
+    }
+    #gt-guaranty-grid>.gt-block-3 {
+        position: relative;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        min-height: 5px;
+    }
+    #gt-tabs-delivery a.ico-delivery1::before {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    #gt-tabs-delivery>ul.gt-tabmenu>li>a {
+        height: 92px;
+        padding-right: 10px;
+    }
+    .gt-delivery-block>.gt-block-white,
+    .gt-delivery-block.right>.gt-block-white {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .gt-delivery-block>.image {
+        display: none;
+    }
+    .gt-delivery-block {
+        margin-bottom: 40px;
     }
 }
 

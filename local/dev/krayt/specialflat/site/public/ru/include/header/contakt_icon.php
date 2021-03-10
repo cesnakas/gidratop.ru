@@ -1,1 +1,0 @@
-<span class="clock"></span>

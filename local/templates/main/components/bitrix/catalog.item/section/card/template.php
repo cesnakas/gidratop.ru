@@ -22,6 +22,67 @@ use \Bitrix\Main\Localization\Loc;
  */
 
 ?>
+
+<div class="item gt-product-item ">
+    <div class="gt-product-item-container ">
+        <div class="gt-pr-item-content ">
+
+            <div class="product-gal ">
+                <a href="<?=$item['DETAIL_PAGE_URL']?>" title="<?=$imgTitle?>" data-entity="image-wrapper">
+                    <img src="<?/*=SITE_TEMPLATE_PATH;/img/images/products/1.png*/?> <?=$item['PREVIEW_PICTURE']['SRC']?>" alt=" " />
+                </a>
+            </div>
+
+            <div class="product-info ">
+                <a href="<?=$item['DETAIL_PAGE_URL']?>" class="name">
+                    <?=$productTitle?>
+                </a>
+                <?if($item["ARTICULE_CODE"]):?>
+                <p>
+                    <?=Loc::getMessage('K_TILE_ARTICULE')?><span class="number"><?=$item["ARTICULE_CODE"]?></span>
+                </p>
+                <?endif;?>
+                <?if (!empty($arResult['PROP_CARD'])) { ?>
+
+                    <? foreach ($arResult['PROP_CARD'] as $prop) { ?>
+
+                        <? if (!empty($prop['VALUE'])): ?>
+                        <p><?=$prop['NAME'];?>:<span><?=$prop['VALUE'];?></span></p>
+                        <? endif; ?>
+
+                    <? } ?>
+
+                <? } ?>
+                <!--<p>Бренд:<span><a href="# ">Aquatek</a></span></p>-->
+                <!--<p>Страна:<span>Россия</span></p>-->
+                <!--<p>Габариты:<span>123x69x18</span></p>-->
+                <!--<p>Материал:<span>Чугун</span></p>-->
+                <a href="# " class="in-stock ">В наличии</a>
+                <div class="price ">15 000</div>
+            </div>
+
+        </div>
+        <div class="product-actions ">
+            <a href="# " class="gt-button ">В корзину</a>
+            <div class="icons ">
+                <a href="# " class="gt-ico-favorite "></a>
+                <a href="# " class="gt-ico ">
+                    <ico class="gt-ico-poll "></ico>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="product-tags ">
+            <span class="gt-tag tag-hit ">Хит продаж</span>
+        </div>
+    </div>
+</div>
+
+<!--//-->
+
+<?/*
+
 <div class="product-item">
     <div class="product-item-box">
 
@@ -390,3 +451,5 @@ use \Bitrix\Main\Localization\Loc;
 
     </div>
 </div>
+
+*/?>

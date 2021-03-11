@@ -35,7 +35,7 @@ if (isset($templateData['TEMPLATE_THEME']))
 				<input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
 			<?endforeach;?>
 
-			<div class="row">
+			<div class="__row">
 				<?foreach($arResult["ITEMS"] as $key=>$arItem)//prices
 				{
 					$key = $arItem["ENCODED_ID"];

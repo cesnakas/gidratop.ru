@@ -152,6 +152,302 @@ $valuta=preg_replace('/\d/','',$price['PRINT_PRICE']);
 
 ?>
 
+    <script async>$('body').addClass('bg-lightgray');</script>
+
+    <section class="gt-section">
+        <div class="gt-container">
+
+            <div class="gt-breadcrumbs-holder">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:breadcrumb",
+                    "catalog",
+                    Array(
+                        "START_FROM" => "0",
+                        "PATH" => "",
+                        "SITE_ID" => "s1"
+                    ),
+                    $component,
+                    array('HIDE_ICONS' => 'Y')
+                );?>
+            </div>
+
+            <div class="gt-product-card" id="<?=$itemIds['ID']?>" itemscope itemtype="http://schema.org/Product" xmlns="http://www.w3.org/1999/html">
+
+                <div class="gt-block-white">
+                    <div class="gt-card-main-grid">
+                        <div class="gt-product-name">
+                            <h1><?=$name?></h1>
+                        </div>
+                        <div class="gt-product-rates">
+                            <div class="gt-rating">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                            <div class="gt-product-tags">
+                                <span class="gt-tag tag-hit">Хит продаж</span>
+                            </div>
+                        </div>
+                        <div class="gt-product-gallery">
+
+                            <div class="gt-owl-gallery-control">
+                                <div class="owl-carousel owl-theme" id="gt-card-gallery">
+                                    <?
+                                    if (!empty($actualItem['MORE_PHOTO']))
+                                    {
+                                        foreach ($actualItem['MORE_PHOTO'] as $key => $photo)
+                                        {
+                                            ?>
+                                            <div class="item gt-owl-gallery-item <?=($key == 0 ? ' active' : '')?>" data-entity="image" data-id="<?=$photo['ID']?>">
+                                                <div class="img">
+                                                    <img src="<?=$photo['SRC']?>" alt="<?=$alt?>" title="<?=$title?>"<?=($key == 0 ? ' itemprop="image"' : '')?>>
+                                                </div>
+                                            </div>
+                                            <?
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
+                                <div class="gt-owl-previews">
+                                    <div class="owl-carousel owl-theme" id="gt-card-gallery-preview">
+                                        <?
+                                        if (!empty($actualItem['MORE_PHOTO']))
+                                        {
+                                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo)
+                                            {
+                                                ?>
+                                                <div class="item gt-owl-gallery-preview-item <?=($key == 0 ? ' active' : '')?>" data-entity="image" data-id="<?=$photo['ID']?>">
+                                                    <div class="img">
+                                                        <img src="<?=$photo['SRC']?>" alt="<?=$alt?>" title="<?=$title?>"<?=($key == 0 ? ' itemprop="image"' : '')?>>
+                                                    </div>
+                                                </div>
+                                                <?
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                function fn_initCardGallery() {
+                                    var main = $('#gt-card-gallery');
+                                    main.owlCarousel({
+                                        margin: 30,
+                                        loop: false,
+                                        autoWidth: false,
+                                        responsiveClass: true,
+                                        nav: false,
+                                        center: true,
+                                        responsive: {
+                                            0: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: true,
+                                                dots: true,
+                                                nav: false,
+                                                margin: 5,
+                                            },
+                                            600: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: false,
+                                                dots: false,
+                                                dotsEach: 0,
+                                                margin: 15,
+                                            },
+                                            1200: {
+                                                items: 1,
+                                                nav: true,
+                                                loop: false,
+                                                dots: false,
+                                                dotsEach: 0,
+                                                margin: 30,
+                                            }
+                                        }
+                                    });
+
+                                    var preview = $('#gt-card-gallery-preview');
+                                    preview.owlCarousel({
+                                        loop: false,
+                                        autoWidth: true,
+                                        responsiveClass: true,
+                                        nav: false,
+                                        dots: false,
+                                        items: 4,
+                                        margin: 30,
+                                        responsive: {
+                                            0: {
+                                                items: 3,
+                                                margin: 10,
+                                            },
+                                            600: {
+                                                items: 4,
+                                                margin: 15,
+                                            },
+                                            1200: {
+                                                items: 4,
+                                                loop: true,
+                                                margin: 50,
+                                            }
+                                        }
+                                    });
+                                }
+                                fn_initCardGallery();
+                            </script>
+                        </div>
+                        <div class="gt-product-info">
+
+                            <div class="gt-grid-50">
+                                <div class="gt-grid50-left gt-hide-mobile gt-about-product">
+                                    <strong>Коротко о товаре</strong>
+                                    <ul class="gt-menu-with-line">
+                                        <li>
+                                            Код товара: <span>232432а2-22</span>
+                                        </li>
+                                        <li>
+                                            Артикул: <span>MIY140-0000001</span>
+                                        </li>
+                                        <li>
+                                            Бренд: <span><a href="#">Мия</a></span>
+                                        </li>
+                                        <li>
+                                            Коллекция: <span><a href="#">Aquatek</a></span>
+                                        </li>
+                                        <li>
+                                            Страна: <span><a href="#">Россия</a></span>
+                                        </li>
+                                        <li>
+                                            Материал: <span>Латунь</span>
+                                        </li>
+                                        <li>
+                                            Габариты: <span>140х44х160</span>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#">Все характеристики</a>
+                                </div>
+                                <div class="gt-grid50-right gt-about-price-details">
+                                    <div class="gt-price">
+                                        15 000
+                                    </div>
+
+                                    <div class="gt-tablet-icons gt-show-tablet">
+
+                                        <a href="#" class="gt-ico">
+                                            <ico class="gt-ico-favorite"></ico>
+                                        </a>
+
+                                        <a class="gt-ico" href="#">
+                                            <ico class="gt-ico-poll"></ico>
+                                        </a>
+                                    </div>
+
+                                    <div class="gt-button-line gt-flex-row">
+                                        <div class="gt-card-btn-holder">
+                                            <a href="#" class="gt-button">В корзину</a>
+                                        </div>
+                                        <? if ($arParams['DISPLAY_COMPARE']):?>
+                                        <div class="gt-card-ico-holder" id="<?=$itemIds['COMPARE_LINK']?>">
+                                            <a href="javascript:void(0);" class="gt-ico">
+                                                <ico class="gt-ico-poll"></ico><span>Сравнение</span>
+                                                <!-- compare -->
+                                                <label for="compare">
+                                                    <div class="icon not-active"></div>
+                                                    <div class="icon active"></div>
+                                                </label>
+                                                <input type="checkbox" data-id="<?=$arResult['ID']?>" data-entity="compare-checkbox" id="compare">
+                                                <!-- /compare -->
+                                            </a>
+                                        </div>
+                                        <? endif; ?>
+                                    </div>
+
+                                    <div class="gt-button-line gt-flex-row">
+                                        <div class="gt-card-btn-holder">
+                                            <a href="#" class="gt-button gt-btn-white">Купить в один клик</a>
+                                        </div>
+                                        <div class="gt-card-ico-holder">
+                                            <a href="#" class="gt-ico" data-cookieid="<?=$arResult['ID']?>">
+                                                <ico class="gt-ico-favorite"></ico><span>Избранное</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="gt-stock-info">
+                                        <a href="# " class="in-stock gt-hide-mobile ">Товар в наличии</a>
+                                        <p>Самовывоз от <strong>1</strong> дней</p>
+                                        <p>Доставка от <strong>12</strong> дней</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="gt-vertical-separator-line"></div>
+                    </div>
+
+                </div>
+
+                <div class="gt-block-white">
+                    <ul class="gt-card-tab-menu tab__menu" data-tabmenu="true" data-tab-class="gt-card-tabcontent">
+                        <li class="active" data-id="tabAbout">О товаре</li>
+                        <li data-id="tabSpecs">Характеристики</li>
+                        <li data-id="tabComplect">Комплектация</li>
+                        <li data-id="tabDocs">Документация</li>
+                        <li data-id="tabReplies">Отзывы</li>
+                        <li data-id="tabQuestions">Вопросы и ответы</li>
+                    </ul>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabAbout">
+                    <div class="gt-block-white-content">О товаре</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabSpecs">
+                    <div class="gt-block-white-content">Характеристики</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabComplect">
+                    <div class="gt-block-white-content">Комплектация</div>
+                </div>
+
+                <!--Тут будет второе меню только для мобильной версии-->
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabDocs">
+
+                    <div class="gt-block-white-content">Документация</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabReplies">
+
+                    <div class="gt-block-white-content">Отзывы</div>
+                </div>
+
+                <div class="gt-block-white gt-card-tabcontent active" id="tabQuestions">
+
+                    <div class="gt-block-white-content">Вопросы и ответы</div>
+                </div>
+
+                <script>
+                    fn_initJqueyTabControl();
+                </script>
+
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+
+<!--//-->
 
 <div class="bx-catalog-element" id="<?=$itemIds['ID']?>"
      itemscope itemtype="http://schema.org/Product" xmlns="http://www.w3.org/1999/html">

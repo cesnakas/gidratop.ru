@@ -448,16 +448,17 @@ $valuta=preg_replace('/\d/','',$price['PRINT_PRICE']);
     </section>
 
 <!--//-->
+<?/*
 
 <div class="bx-catalog-element" id="<?=$itemIds['ID']?>"
      itemscope itemtype="http://schema.org/Product" xmlns="http://www.w3.org/1999/html">
-        <?if (empty($arResult['OFFERS'])){;?>
+        <? if (empty($arResult['OFFERS'])){;?>
             <div class="hiden data_box oktual_prise_product " data-prise="<?=$arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"]?>" data-id="<?=$arResult['ID'];?>"  data-oldprise="<?=$arResult["PRICES"]["BASE"]["VALUE"];?>"></div>
         <?}else{?>
             <?$pos_sku = end($arResult['OFFERS']);?>
             <div class="hiden data_box oktual_prise_product "  data-prise="<?=$pos_sku["PRICES"]["BASE"]["DISCOUNT_VALUE"]?>" data-id="<?=$pos_sku['ID'];?>"  data-oldprise="<?=$pos_sku["PRICES"]["BASE"]["VALUE"];?>"></div>
-        <?}?>
-        <?if ($arParams['DISPLAY_NAME'] === 'Y')
+        <? } ?>
+        <? if ($arParams['DISPLAY_NAME'] === 'Y')
         {
             ?>
             <div class="bx-title-line">
@@ -2821,3 +2822,5 @@ if ($arParams['DISPLAY_COMPARE'])
 </script>
 <?
 unset($actualItem, $itemIds, $jsParams);
+
+*/?>

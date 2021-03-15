@@ -20,12 +20,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                     };
                 ?> 
                 
-                    <li data-select="<?= $i; ?>"
+                    <li id="catalog-item-<?= $section['ID'] ?>" data-select="<?= $i; ?>"
                         class="<?if ($is_complex == true) echo "complex";?><? if (strrpos($_SERVER['REQUEST_URI'], $section['SECTION_PAGE_URL']) !== false) {
                             echo " select";
                         } ?>">
 
-                        <a href="<?= $section['SECTION_PAGE_URL'] ?>"><?= $section['NAME'] ?></a>
+                        <a href="<?= $section['SECTION_PAGE_URL'] ?>" class="gt-root-menu-item"><?= $section['NAME'] ?></a>
                         <? if ((!empty($section['CHILD'])) || (!empty($section['PODBORKI']))): ?>
                             
                             <? if (($is_complex)): ?>

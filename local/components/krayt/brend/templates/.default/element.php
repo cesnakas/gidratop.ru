@@ -13,7 +13,7 @@
 /** @var CBitrixComponent $component */
 
 ?>
-<?$APPLICATION->IncludeComponent("krayt:brend.element", "template1", Array(
+<?$APPLICATION->IncludeComponent("krayt:brend.element", "", Array(
 	"CACHE_TIME" => $arParams["CACHE_TIME"],	// Время кеширования (сек.)
 		"CACHE_TYPE" => $arParams["CACHE_TYPE"],	// Тип кеширования
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],	// Тип инфоблока

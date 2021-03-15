@@ -133,6 +133,8 @@ if ($cache->initCache($arParams['CACHE_TIME'],$strid,"/podborki_sectin_list/".$a
   $cache->endDataCache($arResult);
 
 }
-
+//echo "<div hidden>";
+//print_r($arResult);
+//echo "div";
 
 $this->IncludeComponentTemplate();

@@ -1,27 +1,56 @@
-<div class="w1200" data-idd="w1200">
 
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+echo "<div hidden>";
+print_r($arResult['BREND']);
+echo "</div>";
 
 if (!empty($arResult)):?>
-    <div class="brend_collection_block">
-        <div class="brend_collection_top_block">
-            <div class="text_box">
-                <h1 class="name-brand">
-                    <?= GetMessage("COLLECTION"); ?> <?= $arResult['BREND']['NAME'] ?> <?= $arResult['COLLECTION']['NAME'] ?>
-                </h1>
-            </div>
-            <div class="c-elem">
-                <a href="<?=$arResult['BREND']['SECTION_PAGE_URL']?>" class="img_box">
-                    <? if (empty($arResult['BREND']['PICTURE'])) {
-                        $arResult['BREND']['PICTURE'] = $templateFolder . "/images/no_photo.png";
-                    } else {
-                        $arResult['BREND']['PICTURE'] = CFile::GetPath($arResult['BREND']["PICTURE"]);
-                    } ?>
-                    <div class="bg_img" style="background-image: url(<?= $arResult['BREND']['PICTURE']; ?>);"></div>
-                </a>
-            </div>
+   <div class="brand-card">
+        <div class="gt-breadcrumbs-holder">
+			<ul class="gt-breadcrumbs">
+				<li><a href="/">Главная</a></li>
+				<li><a href="/proizvoditeli/">Производители</a></li>
+				<li><a href="<?= $arResult['BREND']['SECTION_PAGE_URL'] ?>"><?= $arResult['BREND']['NAME'] ?></a></li>
+                <li>Коллекция: <?= $arResult['COLLECTION']['NAME'] ?></li>
+			</ul>
         </div>
+
+
+        <div class="brand-card-top">
+
+			<div class="bg">
+				<img src="/local/templates/main/img/images/brand_card_bg.png" alt="">
+			</div>
+
+			<div class="gt-block-white gt-brand-lead">
+				<div class="gt-img_box">
+					<? if (empty($arResult['BREND']['PICTURE'])) {
+							$arResult['BREND']['PICTURE'] = $templateFolder . "/images/no_photo.png";
+					} else {
+						$arResult['BREND']['PICTURE'] = CFile::GetPath($arResult['BREND']["PICTURE"]);
+					} ?>
+                    <div class="gt-img" style="background-image: url(<?= $arResult['BREND']['PICTURE']; ?>);"></div>
+				</div>
+
+				<div class="gt-description">
+					<h1><?= GetMessage("COLLECTION"); ?><span class="gt-text-blue"><?= $arResult['COLLECTION']['NAME'] ?></span> от <?= $arResult['BREND']['NAME'] ?></h1>
+				</div>
+
+				<div class="gt-brand-action">
+					<a href="#" class="gt-button">Каталог товаров</a>
+				</div>
+			</div>
+        </div>
+
+   </div>
+    
+
+
+   
+
+
+    <div class="brend_collection_block">
         <? if (!empty($arResult["SECTION"])): ?>
             <div class="brend_section_block">
                 <div class="title_box in-collection">
@@ -168,23 +197,36 @@ if (!empty($arResult)):?>
                 <? endforeach; ?>
             </div>
         <? endif; ?>
-        <? if (!empty($arResult["DOP_COLLECTION"])): ?>
-            <div class="dop_collection_box">
-                <div class="title_box">
-                    <?= GetMessage("DOP_COLLECTION"); ?>
-                </div>
-                <div class="spisok_collection">
-                <? foreach ($arResult["DOP_COLLECTION"] as $col): ?>
-                    <a href="<?= $col['DETAIL_PAGE_URL'] ?>">
-                        <div class="collection_box">
-                            <span><?= $col['NAME'] ?></span>
-                        </div>
-                    </a>
-                <? endforeach; ?>
+        
+    </div>
+
+
+    <? if (!empty($arResult["DOP_COLLECTION"])): ?>
+
+        </section>
+
+        <section class="gt-section" id="section-brend-collections">
+        <section class="gt-container">
+            <div class="gt-section-title">
+                <h2><?= GetMessage("DOP_COLLECTION"); ?></h2>
+                <div class="bg-text">Collections</div>
+            </div>
+
+
+            <div class="gt-collections">
+                <div class="gt-collections-list">
+                    <? foreach ($arResult['DOP_COLLECTION'] as $collection): ?>
+                        <a href="<?= $collection['DETAIL_PAGE_URL'] ?>" class="gt-collection-item">
+                            <div class="gt-collection_box">
+                                <?//print_r($collection);?>
+                                <span><?= $collection['NAME'] ?></span>
+                            </div>
+                        </a>
+                    <? endforeach; ?>
                 </div>
             </div>
-        <? endif; ?>
-    </div>
-<? endif; ?>
+        </section>
 
-</div>
+
+    <? endif; ?>
+<? endif; ?>

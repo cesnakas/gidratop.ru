@@ -296,6 +296,9 @@
         font-size: 14px;
         line-height: 18px;
     }
+    .gt-news-list>.gt-news-item {
+        margin: 14px;
+    }
     #gt-section-promo {
         padding-top: 60px;
         padding-bottom: 90px;

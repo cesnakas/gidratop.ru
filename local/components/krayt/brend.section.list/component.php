@@ -175,12 +175,27 @@ if ($cache->initCache($arParams['CACHE_TIME'],"/brend.section.list/".$str)) {
         }
     }
 
-    $spIteratorAlfa = CIBlockSection::GetList(Array("NAME"=>"ASC"),$arFilter2, false,$arSelectr);
+    $spIteratorAlfa = CIBlockSection::GetList(Array("NAME"=>"ASC"), $arFilter2, false, $arSelectr);
+
+    $strEnLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    $strRuLettes = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+    $strNumbers = "0123456789";
+
     $alfavit = array();
+    $alfavit_rus = array();
+    $alfavit_num = array();
 
     while ($arSP = $spIteratorAlfa->GetNext()) {
-        $buk = mb_substr(ltrim($arSP['NAME']," /n"),0,1);
-        $alfavit[$buk] = $buk;
+        $buk = mb_substr(ltrim($arSP['NAME']," /n"), 0, 1);
+        if (strpos($strRuLettes, $buk) !== false){
+            $alfavit_rus[$buk] = $buk;
+        }
+        else if (strpos($strNumbers, $buk) !== false){
+            $alfavit_num[$buk] = $buk;
+        }
+        else{
+            $alfavit[$buk] = $buk;
+        }
     }
 
 
@@ -189,10 +204,9 @@ if ($cache->initCache($arParams['CACHE_TIME'],"/brend.section.list/".$str)) {
     }
 
 
-
-
     $arBrend['ALFAVIT'] = $alfavit;
-
+    $arBrend['ALFAVIT_RUS'] = $alfavit_rus;
+    $arBrend['ALFAVIT_NUM'] = $alfavit_num;
 
     $spIterator->nPageWindow = $arParams['ELEMENT_COL'];
     $arBrend["NAV_STRING"] = $spIterator->GetPageNavStringEx($navComponentObject, "", $arParams['COMPONENT_TEMPLATE']);
@@ -220,7 +234,9 @@ if ($cache->initCache($arParams['CACHE_TIME'],"/brend.section.list/".$str)) {
         }
     }
     print_r("<div hidden>");
-    print_r($arResult);
+    print_r($arResult['ALFAVIT']);
+    print_r($arResult['ALFAVIT_RUS']);
+    print_r($arResult['ALFAVIT_NUM']);
     print_r("</div>");
     $cache->endDataCache($arResult);
 

@@ -15,6 +15,10 @@ if(\Bitrix\Main\Loader::includeSharewareModule("krayt.specialflat") == \Bitrix\M
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+//echo "<div id='div_news_section' hidden>";
+//print_r($arResult);
+//echo "</div>";
 ?>
 <div class="news_page">
 <?$APPLICATION->IncludeComponent(

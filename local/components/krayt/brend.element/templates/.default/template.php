@@ -50,39 +50,130 @@ if (!empty($arResult)):?>
    
 
 
-    <div class="brend_collection_block">
-        <? if (!empty($arResult["SECTION"])): ?>
-            <div class="brend_section_block">
-                <div class="title_box in-collection">
-                    <?= GetMessage("PRODUCT"); ?>
-                </div>
-                <?if(count($arResult["SECTION"]) > 1):?>
-                    <div class="nav_section in-collection">
-                        <? foreach ($arResult["SECTION"] as $section): ?>
-                            <a href="<?= $section['SECTION_PAGE_URL'] ?>?arFilterCatalog_309_<?= abs(crc32($arResult['COLLECTION']['ID'])); ?>=Y&arFilterCatalog_310_<?= abs(crc32($arResult['BREND']['ID'])); ?>=Y&arFilterCatalog_309_357040185=Y&arFilterCatalog_P1_MIN=&arFilterCatalog_P1_MAX=&set_filter=<?=GetMessage("POKAZ");?>"><?= $section['NAME'] ?> <span>(<?= count($section['PRODUCT']); ?>)</span></a>
-                        <? endforeach; ?>
+    <? if (!empty($arResult["SECTION"])): ?>
+
+        </section>
+
+        <section class="gt-section" id="section-brend-items">
+            <section class="gt-container">
+
+            <div class="gt-section-title">
+                <h2><?= GetMessage("PRODUCT"); ?></h2>
+                <div class="bg-text">Goods</div>
+            </div>
+
+
+            <div class="gt-page-catalog">
+                <div class="gt-catalog-aside" id="gt-catalog-filters">
+
+                    <div class="gt-show-mobile gt-catalog-filter-mobile-title">
+                        <span id="gtMobileFilterPanelName">Панель фитров:</span>
                     </div>
-                <?endif;?>
-                <? foreach ($arResult["SECTION"] as $section): ?>
-                    <div class="brend_section_box">
-                        <a href="<?= $section['SECTION_PAGE_URL'] ?>?arFilterCatalog_309_<?= abs(crc32($arResult['COLLECTION']['ID'])); ?>=Y&arFilterCatalog_310_<?= abs(crc32($arResult['BREND']['ID'])); ?>=Y&arFilterCatalog_309_357040185=Y&arFilterCatalog_P1_MIN=&arFilterCatalog_P1_MAX=&set_filter=<?=GetMessage("POKAZ");?>" class="title_box sub">
-                            <span><?= $section['NAME'] ?></span> <span class="count"><?= count($section['PRODUCT']); ?></span>
-                        </a>
-                        <div class="companent_section_box">
+                    <!--ПАНЕЛЬ ФИЛЬТРОВ-->
+                    <div class="gt-aside-block expanded">
+                        <div class="gt-aside-block-title">
+                            <a href="#" class="gt-aside-toggler" onclick="return false;">Товары <?= $arResult['COLLECTION']['NAME'] ?></a>
+                        </div>
+                        <div class="gt-aside-block-content" id="brand-catalog-types">
+							<? foreach ($arResult["SECTION"] as $section): ?>
+								<?$cifra = abs(crc32($arResult['BREND']['ID']));?>
+								<div class="gt-checkbox">
+									<input id="checkbox<?=$section["ID"]?>" data-id="<?=$section["ID"]?>" type="checkbox" class="gt-cb-category" />
+									<label for="checkbox<?=$section["ID"]?>">
+									    <?= $section['NAME'] ?>&nbsp;(<?= count($section['PRODUCT']); ?>)
+										<a style="display:none;" target="_blank" onclick="return false;" href="<?= $section['SECTION_PAGE_URL'] ?>?arFilterCatalog_310_<?=abs(crc32($arResult['BREND']['ID'])); ?>=Y&set_filter=<?=GetMessage("POKA");?>"><?= $section['NAME'] ?> <span>(<?= count($section['PRODUCT']); ?>)</span></a>
+									</label>
+								</div>
+							<? endforeach; ?>
+                        </div>
+                    </div>
+                    
+                    <!--!!!ПАНЕЛЬ ФИЛЬТРОВ-->
+                    <div class="gt-hide-mobile">
+					    <br>
+                        <a href="#" class="gt-button gt-btn-full" onclick="fn_BrandCatalogFilters(event, false)">Применить</a>
+                        <a href="#" class="gt-button gt-btn-greentext gt-btn-full" onclick="fn_BrandCatalogFilters(event, true)">Сбросить фильтры</a>
+                    </div>
+
+                    <div class="gt-aside-block expanded">
+                        <div class="gt-aside-block-title">
+                            <a href="#" class="gt-aside-toggler" onclick="clickCatalogExpand(event, this)">Коллекции <?= $arResult['BREND']['NAME'] ?></a>
+                        </div>
+                        <div class="gt-aside-block-content">
+                            <ul class="gt-aside-menu gt-link-gray">
+							<? foreach ($arResult['DOP_COLLECTION'] as $collection): ?>
+								<li>
+									<a href="<?= $collection['DETAIL_PAGE_URL'] ?>">
+										<span><?= $collection['NAME'] ?></span>
+									</a>
+								</li>
+							<? endforeach; ?>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gt-catalog-mobile-filters gt-show-mobile">
+                        <a href="#" class="gt-button gt-btn-full" onclick="fn_BrandCatalogFilters(event, false, true)">Применить</a>
+                        <a href="#" class="gt-button gt-btn-greentext gt-btn-full" onclick="fn_BrandCatalogFilters(event, true, true)">Сбросить фильтры</a>
+                    </div>
+                </div>
+                <div class="gt-catalog-content">
+                    <div class="gt-show-mobile gt-mobile-filters">
+                        <div class="gt-flex-row" style="justify-content: space-between;">
+                            <div>
+                                <div class="gt-dropdown" onclick="toggleCatalogFilters(event, true, 1)">
+                                    <div class="name">Коллекции</div>
+                                    <span class="toggler"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gt-dropdown" onclick="toggleCatalogFilters(event, true, 0)">
+                                    <div class="name">Фильтры</div>
+                                    <span class="toggler"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="gt-catalog-content-menu gt-hide-mobile ">
+
+                        <ul class="gt-catalog-menu ">
+                            <li>Сортировать:</li>
+                            <li><a href="# " class="active ">По популярности</a></li>
+                            <li><a href="# ">Сначала дешевые</a></li>
+                            <li><a href="# ">Сначала дорогие</a></li>
+                        </ul>
+
+                        <div class="gt-catalog-viewtype ">
+                            <ul class="gt-inline-ul ">
+                                <li>
+                                    <a href="# " class="gt-view-icon gt-view-1 "></a>
+                                </li>
+                                <li>
+                                    <a href="# " class="gt-view-icon gt-view-2 "></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gt-catalog-content-items gt-product-items-inrow gt-items-buttons-toggled gt-catalog-items-holder ">
+                        <!-- Компоненты-->
+                        <? foreach ($arResult["SECTION"] as $section): ?>
                             <?
                             global $filterCol;
                             $filterCol = array("PROPERTY_COLLECTION" => $arResult['COLLECTION']['ID'], "PROPERTY_NO_CATALOG" => false); ?>
-
                             <? $APPLICATION->IncludeComponent(
                                 "bitrix:catalog.section",
-                                "brend",
+                                "brend-gt",
                                 Array(
                                     "ACTION_VARIABLE" => "action",
                                     "ADD_PICT_PROP" => "MORE_PHOTO",
                                     "ADD_PROPERTIES_TO_BASKET" => "Y",
                                     "ADD_SECTIONS_CHAIN" => "N",
                                     "ADD_TO_BASKET_ACTION" => "ADD",
-                                    "AJAX_MODE" => "Y",
+                                    "AJAX_MODE" => "N",
                                     "AJAX_OPTION_ADDITIONAL" => "",
                                     "AJAX_OPTION_HISTORY" => "N",
                                     "AJAX_OPTION_JUMP" => "N",
@@ -139,7 +230,7 @@ if (!empty($arResult)):?>
                                     "PAGER_SHOW_ALL" => "N",
                                     "PAGER_SHOW_ALWAYS" => "N",
                                     "PAGER_TEMPLATE" => ".default",
-                                    "PAGE_ELEMENT_COUNT" => "18",
+                                    "PAGE_ELEMENT_COUNT" => "1800",
                                     "PARTIAL_PRODUCT_PROPERTIES" => "N",
                                     "PRICE_CODE" => $arParams['PRICE_CODE'],
                                     "PRICE_VAT_INCLUDE" => "Y",
@@ -192,17 +283,24 @@ if (!empty($arResult)):?>
                                     "DISPLAY_COMPARE" => "Y"
                                 )
                             ); ?>
-                        </div>
+            
+                        <? endforeach; ?>
+                        <!-- !Компоненты-->
                     </div>
-                <? endforeach; ?>
+                </div>
             </div>
-        <? endif; ?>
-        
-    </div>
+
+        </section>
+
+
+
+
+
+    <? endif; ?>
+    
 
 
     <? if (!empty($arResult["DOP_COLLECTION"])): ?>
-
         </section>
 
         <section class="gt-section" id="section-brend-collections">

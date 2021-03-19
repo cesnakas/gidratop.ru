@@ -107,7 +107,7 @@ if (!empty($arResult)):?>
 								<div class="gt-checkbox">
 									<input id="checkbox<?=$section["ID"]?>" data-id="<?=$section["ID"]?>" type="checkbox" class="gt-cb-category" />
 									<label for="checkbox<?=$section["ID"]?>">
-									    <?= $section['NAME'] ?>&nbsp;<span class="gt-count">(<?= count($section['PRODUCT']); ?>)</span>
+									    <?= $section['NAME'] ?>&nbsp;(<?= count($section['PRODUCT']); ?>)
 										<a style="display:none;" target="_blank" onclick="return false;" href="<?= $section['SECTION_PAGE_URL'] ?>?arFilterCatalog_310_<?=abs(crc32($arResult['BREND']['ID'])); ?>=Y&set_filter=<?=GetMessage("POKA");?>"><?= $section['NAME'] ?> <span>(<?= count($section['PRODUCT']); ?>)</span></a>
 									</label>
 								</div>
@@ -214,7 +214,7 @@ if (!empty($arResult)):?>
 								"ADD_PROPERTIES_TO_BASKET" => "Y",
 								"ADD_SECTIONS_CHAIN" => "N",
 								"ADD_TO_BASKET_ACTION" => "ADD",
-								"AJAX_MODE" => "Y",
+								"AJAX_MODE" => "N", // Y
 								"AJAX_OPTION_ADDITIONAL" => "",
 								"AJAX_OPTION_HISTORY" => "N",
 								"AJAX_OPTION_JUMP" => "N",
@@ -229,7 +229,7 @@ if (!empty($arResult)):?>
 								"CUSTOM_FILTER" => "",
 								"DATA_LAYER_NAME" => "dataLayer",
 								"DETAIL_URL" => "",
-								"DISABLE_INIT_JS_IN_COMPONENT" => "N",
+								"DISABLE_INIT_JS_IN_COMPONENT" => "Y",
 								"DISCOUNT_PERCENT_POSITION" => $arParams["DISCOUNT_PERCENT_POSITION"],
 								"DISPLAY_BOTTOM_PAGER" => "Y",
 								"DISPLAY_TOP_PAGER" => "N",
@@ -278,7 +278,7 @@ if (!empty($arResult)):?>
 								"PAGER_SHOW_ALL" => "N",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_TEMPLATE" => ".default",
-								"PAGE_ELEMENT_COUNT" => "18",
+								"PAGE_ELEMENT_COUNT" => "1800",//18
 								"PARTIAL_PRODUCT_PROPERTIES" => "N",
 								"PRICE_CODE" => $arParams['PRICE_CODE'],
 								"PRICE_VAT_INCLUDE" => "Y",

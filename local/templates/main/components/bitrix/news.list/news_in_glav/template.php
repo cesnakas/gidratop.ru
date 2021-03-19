@@ -12,6 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
+
+echo "<div id='div_news_in_glav' hidden>";
+print_r($arResult);
+echo "</div>";
 ?>
 <section class="news_in_glav">
     <div class="title_box">

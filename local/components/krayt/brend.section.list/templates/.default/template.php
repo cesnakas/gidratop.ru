@@ -94,79 +94,125 @@ if (!empty($arResult)):?>
                     <tbody>
                         <tr>
                             <td class="w-fixed">
+                                <? 
+                                    $isEn = false;
+                                    $isRu = false;
+                                    $isNum = false;
+                                    if (!strripos($_SERVER['REQUEST_URI'], "bukva")) {
+                                        $active = " active";
+                                        $isEn = true;
+                                    }
+                                    else{
+                                       if (in_array($_REQUEST['bukva'], $arResult['ALFAVIT'])){
+                                           $isEn = true;
+                                       }
 
-                                <? if (!strripos($_SERVER['REQUEST_URI'], "bukva")) {$active = " active";}?>
+                                       else if (in_array($_REQUEST['bukva'], $arResult['ALFAVIT_RUS'])){
+                                            $isRu = true;
+                                       }
+
+                                       else if (in_array($_REQUEST['bukva'], $arResult['ALFAVIT_NUM'])){
+                                            $isNum = true;
+                                       }
+
+                                    }
+                                ?>
                                 <a class="gt-link-gray<?= $active; ?>" href="<?= sgp($_SERVER['REQUEST_URI'], 'bukva', ''); ?>"><?=GetMessage("VSE");?></a>
                             </td>
-                            <td class="letters">
-                            <? foreach ($arResult['ALFAVIT'] as $buk):?>
-                                <? if (strripos($_SERVER['REQUEST_URI'], "bukva")) {
-                                    $url = sgp($_SERVER['REQUEST_URI'], 'bukva', $buk);
-                                } else {
-                                    if (strripos($_SERVER['REQUEST_URI'], "?")) {
-                                        $url = $_SERVER['REQUEST_URI'] . "&bukva=" . $buk;
+                            <td class="letters <?if ($isEn == true){echo "expanded";}?>">
+                                <div class="toggler"><a href="#" class="gt-link-gray">A-Z</a></div>
+                                <div class="ltr-content">
+                                    <? foreach ($arResult['ALFAVIT'] as $buk):?>
+                                        <? if (strripos($_SERVER['REQUEST_URI'], "bukva")) {
+                                            $url = sgp($_SERVER['REQUEST_URI'], 'bukva', $buk);
+                                        } else {
+                                            if (strripos($_SERVER['REQUEST_URI'], "?")) {
+                                                $url = $_SERVER['REQUEST_URI'] . "&bukva=" . $buk;
 
-                                    } else {
-                                        $url = "?bukva=" . $buk;
-                                    }
-                                } ?>
-                                <? if ($buk != " "):?>
-                                    <? if ($_REQUEST['bukva'] == $buk) {
+                                            } else {
+                                                $url = "?bukva=" . $buk;
+                                            }
+                                        } ?>
+                                        <? if ($buk != " "):?>
+                                            <? if ($_REQUEST['bukva'] == $buk) {
+                                                $active = "active";
+                                            } else {
+                                                unset($active);
+                                            } ?>
+                                            <a class="alfavit__item gt-link-gray <?= $active; ?>" href="<?= $url; ?>"><?= $buk; ?></a>
+                                        <? endif; ?>
+                                    <? endforeach; ?>
+                                    <? if (empty($_REQUEST['bukva'])) {
                                         $active = "active";
                                     } else {
                                         unset($active);
                                     } ?>
-                                    <a class="alfavit__item gt-link-gray <?= $active; ?>" href="<?= $url; ?>"><?= $buk; ?></a>
-                                <? endif; ?>
-                            <? endforeach; ?>
-                            <? if (empty($_REQUEST['bukva'])) {
-                                $active = "active";
-                            } else {
-                                unset($active);
-                            } ?>
+                                </div>
                             </td>
-                            <td class="w-fixed">
 
-
-                                <? if (strripos($_SERVER['REQUEST_URI'], "nameFilter")) {
-                                        $url = sgp($_SERVER['REQUEST_URI'], 'nameFilter', 0);
-                                    } else {
-                                        if (strripos($_SERVER['REQUEST_URI'], "?")) {
-                                            $url = $_SERVER['REQUEST_URI'] . "&nameFilter=" . 0;
-
+                            <td class="letters <?if ($isRu == true){echo "expanded";}?>">
+                                <div class="toggler"><a href="#" class="gt-link-gray">А-Я</a></div>
+                                <div class="ltr-content">
+                                    <? foreach ($arResult['ALFAVIT_RUS'] as $buk):?>
+                                        <? if (strripos($_SERVER['REQUEST_URI'], "bukva")) {
+                                            $url = sgp($_SERVER['REQUEST_URI'], 'bukva', $buk);
                                         } else {
-                                            $url = "?nameFilter=" . 0;
-                                        }
-                                } ?>
-                                <a href="<?= $url; ?>" class="gt-link-gray">А-Я</a>
+                                            if (strripos($_SERVER['REQUEST_URI'], "?")) {
+                                                $url = $_SERVER['REQUEST_URI'] . "&bukva=" . $buk;
+
+                                            } else {
+                                                $url = "?bukva=" . $buk;
+                                            }
+                                        } ?>
+                                        <? if ($buk != " "):?>
+                                            <? if ($_REQUEST['bukva'] == $buk) {
+                                                $active = "active";
+                                            } else {
+                                                unset($active);
+                                            } ?>
+                                            <a class="alfavit__item gt-link-gray <?= $active; ?>" href="<?= $url; ?>"><?= $buk; ?></a>
+                                        <? endif; ?>
+                                    <? endforeach; ?>
+                                    <? if (empty($_REQUEST['bukva'])) {
+                                        $active = "active";
+                                    } else {
+                                        unset($active);
+                                    } ?>
+                                </div>
                             </td>
 
-                            <td class="w-fixed">
-                            <? if (strripos($_SERVER['REQUEST_URI'], "nameFilter")) {
-                                    $url = sgp($_SERVER['REQUEST_URI'], 'nameFilter', 1);
-                                } else {
-                                    if (strripos($_SERVER['REQUEST_URI'], "?")) {
-                                        $url = $_SERVER['REQUEST_URI'] . "&nameFilter=" . 1;
 
-                                    } else {
-                                        $url = "?nameFilter=" . 1;
-                                    }
-                            } ?>
-                            <a href="<?= $url; ?>" class="gt-link-gray">A-Z</a>
-                            </td>
-                            <td class="w-fixed">
-                                <? if (strripos($_SERVER['REQUEST_URI'], "nameFilter")) {
-                                        $url = sgp($_SERVER['REQUEST_URI'], 'nameFilter', 2);
-                                    } else {
-                                        if (strripos($_SERVER['REQUEST_URI'], "?")) {
-                                            $url = $_SERVER['REQUEST_URI'] . "&nameFilter=" . 2;
-
+                            <td class="letters <?if ($isNum == true){echo "expanded";}?>">
+                                <div class="toggler"><a href="#" class="gt-link-gray">0-9</a></div>
+                                <div class="ltr-content">
+                                    <? foreach ($arResult['ALFAVIT_NUM'] as $buk):?>
+                                        <? if (strripos($_SERVER['REQUEST_URI'], "bukva")) {
+                                            $url = sgp($_SERVER['REQUEST_URI'], 'bukva', $buk);
                                         } else {
-                                            $url = "?nameFilter=" . 2;
-                                        }
-                                } ?>
-                                <a href="<?= $url; ?>" class="gt-link-gray">0-9</a>
+                                            if (strripos($_SERVER['REQUEST_URI'], "?")) {
+                                                $url = $_SERVER['REQUEST_URI'] . "&bukva=" . $buk;
+
+                                            } else {
+                                                $url = "?bukva=" . $buk;
+                                            }
+                                        } ?>
+                                        <? if ($buk != " "):?>
+                                            <? if ($_REQUEST['bukva'] == $buk) {
+                                                $active = "active";
+                                            } else {
+                                                unset($active);
+                                            } ?>
+                                            <a class="alfavit__item gt-link-gray <?= $active; ?>" href="<?= $url; ?>"><?= $buk; ?></a>
+                                        <? endif; ?>
+                                    <? endforeach; ?>
+                                    <? if (empty($_REQUEST['bukva'])) {
+                                        $active = "active";
+                                    } else {
+                                        unset($active);
+                                    } ?>
+                                </div>
                             </td>
+
                             <td class="w-fixed">
                                 <ul class="gt-inline-ul ">
                                     <li>
@@ -231,21 +277,26 @@ if (!empty($arResult)):?>
                 <? endforeach; ?>
            
            </div>
-           <div class="page-navigation" data-pagination-num="<?=$navParams['NavNum']?>" style="display:none;">
+           <div id="realTemplatePager" class="page-navigation" data-pagination-num="<?=$navParams['NavNum']?>" style="display:none;">
                 <? echo $arResult["NAV_STRING"]; ?>
-            </div>
+           </div>
 
-            <a href="# " class="gt-button gt-btn-white gt-btn-full gt-btn-uppercase gt-border-gray ">Показать ещё</a>
+           <div id="fakePager"></div>
 
-            <div class="gt-pager ">
-                <ul class="gt-pager-ul ">
-                    <li>
-                        <a href="# " class="active ">1</a>
-                    </li>
-                    <li>
-                        <a href="# ">2</a>
-                    </li>
-                </ul>
+           <div style="display:none;">
+                <a href="# " class="gt-button gt-btn-white gt-btn-full gt-btn-uppercase gt-border-gray ">Показать ещё</a>
+
+                <div class="gt-pager ">
+                    <ul class="gt-pager-ul">
+                        <li>
+                            <a href="# " class="active ">1</a>
+                        </li>
+                        <li>
+                            <a href="# ">2</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>

@@ -1,5 +1,4 @@
 <? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
-
 /**
  * @global CMain $APPLICATION
  * @var array $arParams
@@ -9,10 +8,17 @@
  * @var string $templateName
  * @var string $componentPath
  * @var string $templateFolder
+ *
+ * @var string $strElementEdit
+ * @var string $strElementDelete
+ * @var array $arElementDeleteParams
+ * @var array $arSkuTemplate
  */
-
+global $APPLICATION;
 $this->setFrameMode(true);
+?>
 
+<?/*
 if (!empty($arResult['ITEMS']))
 {
 	$elementEdit = CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_EDIT');
@@ -72,4 +78,81 @@ if (!empty($arResult['ITEMS']))
 	</script>
 	<?
 }
-?>
+*/?>
+
+    <div class="gt-container">
+
+        <div class="gt-section-title">
+            <h2><?=$arParams['TITLE_BOX']; // Акции ?></h2>
+            <div class="bg-text">Stock</div>
+        </div>
+
+        <div class="owl-carousel owl-theme gt-slider-promo" id="slider-promos">
+
+            <? foreach ($arResult['ITEMS'] as $key => $arItem) {
+                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
+                $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strElementDelete, $arElementDeleteParams);
+                $strMainID = $this->GetEditAreaId($arItem['ID']);
+                $arItemIDs = array(
+                    'ID' => $strMainID,
+                    'PICT' => $strMainID.'_pict',
+                    'SECOND_PICT' => $strMainID.'_secondpict',
+                    'MAIN_PROPS' => $strMainID.'_main_props',
+
+                    'QUANTITY' => $strMainID.'_quantity',
+                    'QUANTITY_DOWN' => $strMainID.'_quant_down',
+                    'QUANTITY_UP' => $strMainID.'_quant_up',
+                    'QUANTITY_MEASURE' => $strMainID.'_quant_measure',
+                    'BUY_LINK' => $strMainID.'_buy_link',
+                    'SUBSCRIBE_LINK' => $strMainID.'_subscribe',
+
+                    'PRICE' => $strMainID.'_price',
+                    'DSC_PERC' => $strMainID.'_dsc_perc',
+                    'SECOND_DSC_PERC' => $strMainID.'_second_dsc_perc',
+
+                    'PROP_DIV' => $strMainID.'_sku_tree',
+                    'PROP' => $strMainID.'_prop_',
+                    'DISPLAY_PROP_DIV' => $strMainID.'_sku_prop'
+                );
+                $strObName = 'ob'.preg_replace("/[^a-zA-Z0-9_]/i", "x", $strMainID);
+            ?>
+
+            <div class="item gt-promo-item" id="<? echo $arItemIDs['PICT']; ?>">
+                <div class="img">
+                    <img src="<?=$arItem['PREVIEW_PICTURE']['SRC'];?>" alt="">
+                </div>
+            </div>
+
+            <? } ?>
+
+        </div>
+
+        <script type="text/javascript">
+            $('#slider-promos').owlCarousel({
+                margin: 30,
+                loop: true,
+                autoWidth: true,
+                responsiveClass: true,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        nav: true,
+                        margin: 5,
+                    },
+                    600: {
+                        items: 3,
+                        nav: true,
+                        margin: 15,
+                    },
+                    1200: {
+                        items: 3,
+                        nav: true,
+                        loop: true,
+                        margin: 30,
+                    }
+                }
+            })
+        </script>
+
+    </div>

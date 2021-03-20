@@ -5,99 +5,109 @@ $APPLICATION->SetPageProperty("keywords", "Интернет-магазин ев�
 $APPLICATION->SetPageProperty("title", "Интернет-магазин европейской сантехники");
 $APPLICATION->SetTitle("Интернет-магазин европейской сантехники");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
-?><?if (IsModuleInstalled("advertising")):?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"slider", 
-	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"FILTER_NAME" => "",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "11",
-		"IBLOCK_TYPE" => "content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "20",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "LINK",
-			1 => "MOBILE_BANNER",
-			2 => "",
-		),
-		"SET_BROWSER_TITLE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "slider",
-		"INTERVAL_COUNT" => "5000",
-		"LOAD_IMG_JS" => "Y",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);?> <?$APPLICATION->IncludeComponent(
-	"bitrix:advertising.banner",
-	"new_baner",
-	Array(
-		"16" => "/catalog/",
-		"BS_ARROW_NAV" => "Y",
-		"BS_BULLET_NAV" => "Y",
-		"BS_CYCLING" => "Y",
-		"BS_EFFECT" => "fade",
-		"BS_HIDE_FOR_PHONES" => "Y",
-		"BS_HIDE_FOR_TABLETS" => "N",
-		"BS_INTERVAL" => "5000",
-		"BS_KEYBOARD" => "Y",
-		"BS_PAUSE" => "Y",
-		"BS_WRAP" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"DEFAULT_TEMPLATE" => "-",
-		"NOINDEX" => "Y",
-		"QUANTITY" => "3",
-		"TITLE_BOX" => "ПОПУЛЯРНЫЕ КАТЕКГОРИИ",
-		"TYPE" => "MAIN"
-	)
-);?> <?endif;?> <?$APPLICATION->IncludeComponent(
+?>
+
+<?if (IsModuleInstalled("advertising")):?>
+
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:news.list",
+        "slider",
+        array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "ADD_SECTIONS_CHAIN" => "Y",
+            "AJAX_MODE" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "DISPLAY_BOTTOM_PAGER" => "Y",
+            "DISPLAY_DATE" => "Y",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "DISPLAY_TOP_PAGER" => "N",
+            "FIELD_CODE" => array(
+                0 => "",
+                1 => "",
+            ),
+            "FILTER_NAME" => "",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "IBLOCK_ID" => "11",
+            "IBLOCK_TYPE" => "content",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+            "INCLUDE_SUBSECTIONS" => "Y",
+            "MESSAGE_404" => "",
+            "NEWS_COUNT" => "20",
+            "PAGER_BASE_LINK_ENABLE" => "N",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => ".default",
+            "PAGER_TITLE" => "Новости",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "PROPERTY_CODE" => array(
+                0 => "LINK",
+                1 => "MOBILE_BANNER",
+                2 => "",
+            ),
+            "SET_BROWSER_TITLE" => "Y",
+            "SET_LAST_MODIFIED" => "N",
+            "SET_META_DESCRIPTION" => "Y",
+            "SET_META_KEYWORDS" => "Y",
+            "SET_STATUS_404" => "N",
+            "SET_TITLE" => "Y",
+            "SHOW_404" => "N",
+            "SORT_BY1" => "ACTIVE_FROM",
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER1" => "DESC",
+            "SORT_ORDER2" => "ASC",
+            "STRICT_SECTION_CHECK" => "N",
+            "COMPONENT_TEMPLATE" => "slider",
+            "INTERVAL_COUNT" => "5000",
+            "LOAD_IMG_JS" => "Y",
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO"
+        ),
+        false
+    );?>
+
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:advertising.banner",
+        "new_baner",
+        Array(
+            "16" => "/catalog/",
+            "BS_ARROW_NAV" => "Y",
+            "BS_BULLET_NAV" => "Y",
+            "BS_CYCLING" => "Y",
+            "BS_EFFECT" => "fade",
+            "BS_HIDE_FOR_PHONES" => "Y",
+            "BS_HIDE_FOR_TABLETS" => "N",
+            "BS_INTERVAL" => "5000",
+            "BS_KEYBOARD" => "Y",
+            "BS_PAUSE" => "Y",
+            "BS_WRAP" => "Y",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "DEFAULT_TEMPLATE" => "-",
+            "NOINDEX" => "Y",
+            "QUANTITY" => "3",
+            "TITLE_BOX" => "ПОПУЛЯРНЫЕ КАТЕКГОРИИ",
+            "TYPE" => "MAIN"
+        )
+    );?>
+
+<?endif;?>
+
+<?$APPLICATION->IncludeComponent(
 	"krayt:section_in_glav",
 	".default",
 	Array(
@@ -117,7 +127,9 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 		"PAGE_SECTION" => "/catalog/",
 		"TITLE_BOX" => ""
 	)
-);?><?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section", 
 	"section_glav", 
 	array(
@@ -280,34 +292,42 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 		"USE_PRODUCT_QUANTITY" => "N"
 	),
 	false
-);?> <?if (IsModuleInstalled("advertising")):?> <?$APPLICATION->IncludeComponent(
-	"bitrix:advertising.banner", 
-	"main2_baner", 
-	array(
-		"0" => "/catalog/",
-		"BS_ARROW_NAV" => "Y",
-		"BS_BULLET_NAV" => "Y",
-		"BS_CYCLING" => "Y",
-		"BS_EFFECT" => "fade",
-		"BS_HIDE_FOR_PHONES" => "Y",
-		"BS_HIDE_FOR_TABLETS" => "N",
-		"BS_INTERVAL" => "5000",
-		"BS_KEYBOARD" => "Y",
-		"BS_PAUSE" => "Y",
-		"BS_WRAP" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "main2_baner",
-		"DEFAULT_TEMPLATE" => "main2_baner",
-		"NOINDEX" => "Y",
-		"QUANTITY" => "3",
-		"TITLE_BOX" => "ПОПУЛЯРНЫЕ КАТЕКГОРИИ",
-		"TYPE" => "MAIN2",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);?> <?endif;?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?if (IsModuleInstalled("advertising")):?>
+
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:advertising.banner",
+        "main2_baner",
+        array(
+            "0" => "/catalog/",
+            "BS_ARROW_NAV" => "Y",
+            "BS_BULLET_NAV" => "Y",
+            "BS_CYCLING" => "Y",
+            "BS_EFFECT" => "fade",
+            "BS_HIDE_FOR_PHONES" => "Y",
+            "BS_HIDE_FOR_TABLETS" => "N",
+            "BS_INTERVAL" => "5000",
+            "BS_KEYBOARD" => "Y",
+            "BS_PAUSE" => "Y",
+            "BS_WRAP" => "Y",
+            "CACHE_TIME" => "36000000",
+            "CACHE_TYPE" => "A",
+            "COMPONENT_TEMPLATE" => "main2_baner",
+            "DEFAULT_TEMPLATE" => "main2_baner",
+            "NOINDEX" => "Y",
+            "QUANTITY" => "3",
+            "TITLE_BOX" => "ПОПУЛЯРНЫЕ КАТЕКГОРИИ",
+            "TYPE" => "MAIN2",
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO"
+        ),
+        false
+    );?>
+
+<?endif;?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.top", 
 	"new_top_second", 
 	array(
@@ -436,7 +456,9 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 	array(
 		"ACTIVE_COMPONENT" => "Y"
 	)
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.top", 
 	"new_top", 
 	array(
@@ -562,7 +584,9 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 	array(
 		"ACTIVE_COMPONENT" => "Y"
 	)
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"krayt:section_in_glav",
 	"brend",
 	Array(
@@ -581,8 +605,9 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 		"TITLE_BOX" => "ПРОИЗВОДИТЕЛИ"
 	)
 );?>
+
 <div class="block_in_main">
-	 <?$APPLICATION->IncludeComponent(
+ <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"news_in_glav", 
 	array(
@@ -652,4 +677,8 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 	false
 );?>
 </div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<br>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>
